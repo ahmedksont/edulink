@@ -177,7 +177,10 @@
     "award": "IEEE Entrepreneurship Gewinner",
 
     "awardDescription": "Gewinner des IEEE Entrepreneurship Wettbewerbs für Innovationen im Bereich KI-gestützter Bildungstechnologien."
-  }
+  },
+  "loader": {
+  "text": "ERLEBNIS WIRD VORBEREITET"
+}
 }
 
 

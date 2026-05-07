@@ -157,7 +157,10 @@
     "award": "IEEE Entrepreneurship Winner",
 
     "awardDescription": "Winner of the IEEE Entrepreneurship Competition for innovation in AI-powered education technology."
-  }
+  },
+  "loader": {
+  "text": "PREPARING EXPERIENCE"
+}
 
 }
   

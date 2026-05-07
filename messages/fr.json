@@ -178,6 +178,9 @@
     "award": "Lauréat IEEE Entrepreneurship",
 
     "awardDescription": "Lauréat du concours IEEE Entrepreneurship pour l'innovation dans les technologies éducatives alimentées par l'IA."
-  }
+  },
+  "loader": {
+  "text": "PRÉPARATION DE L’EXPÉRIENCE"
+}
 
 }

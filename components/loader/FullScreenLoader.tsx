@@ -1,10 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export default function FullScreenLoader() {
+  const t = useTranslations();
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-white overflow-hidden">
+    <div className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-white">
       {/* Glow Background */}
       <motion.div
         className="absolute w-72 h-72 rounded-full bg-violet-700/20 blur-3xl"
@@ -26,28 +29,6 @@ export default function FullScreenLoader() {
         transition={{ duration: 0.8 }}
         className="relative flex flex-col items-center"
       >
-        {/* Rotating Ring */}
-        <motion.div
-          className="absolute w-52 h-52 rounded-full border border-violet-500/30"
-          animate={{ rotate: 360 }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        />
-
-        {/* Second Ring */}
-        <motion.div
-          className="absolute w-64 h-64 rounded-full border border-violet-400/10"
-          animate={{ rotate: -360 }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        />
-
         {/* Logo */}
         <motion.img
           src="/logo.png"
@@ -71,7 +52,7 @@ export default function FullScreenLoader() {
 
         {/* Loading Text */}
         <motion.p
-          className="mt-8 text-sm tracking-[0.35em] text-violet-300 font-light"
+          className="mt-8 text-[11px] md:text-sm tracking-[0.35em] text-violet-400 font-light uppercase text-center"
           animate={{
             opacity: [0.4, 1, 0.4],
           }}
@@ -80,7 +61,7 @@ export default function FullScreenLoader() {
             repeat: Infinity,
           }}
         >
-          LOADING
+          {t("loader.text")}
         </motion.p>
 
         {/* Animated Dots */}
