@@ -1,0 +1,163 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "programs": "Programs",
+    "community": "Community",
+    "contact": "Contact",
+    "ripu": "RIPU",
+    "achievement": "Achievement"
+  },
+  "hero": {
+    "title": "EduLink\nTunisien EdTech Collider",
+    "subtitle": "Where education and technology collide",
+    "cta": "Discover"
+  },
+  "about": {
+    "title": "About",
+    "description": "The Tunisian EduLink Collider connects EdTech startups, educational institutions, researchers, and investors to build a new generation of intelligent education driven by digital pedagogy, artificial intelligence, and innovation."
+  },
+  "programs": {
+    "title": "Programs",
+    "description": "Our programs designed to accelerate innovation in education."
+  },
+  "community": {
+    "title": "Community",
+    "description": "Join a network of passionate entrepreneurs, educators, and innovators."
+  },
+  
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Send us a message to explore collaboration opportunities within the Tunisian EduLink ecosystem.",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "Your email",
+    "message": "Your message...",
+    "cta": "Send message"
+  }
+,
+  "footer": {
+    "tag": "Tunisian EduLink Hub",
+    "description": "An ecosystem where education and technology meet to innovate.",
+
+    "navTitle": "Navigation",
+    "quickTitle": "Quick Links",
+    "contactTitle": "Contact",
+
+    "nav": {
+      "about": "About",
+      "programs": "Programs",
+      "community": "Community",
+      "contact": "Contact"
+    },
+
+    "quick": {
+      "events": "Events",
+      "news": "News",
+      "partners": "Partners",
+      "faq": "FAQ"
+    },
+
+    "address": "Tunis, Tunisia",
+    "email": "contact@EduLink.tn",
+    "phone": "+216 XX XXX XXX",
+    "placeholder": "Your email",
+
+    "rights": "All rights reserved • Developed by {name}"
+  },
+   "vision": {
+    "title": "Our Vision",
+    "paragraph1": "We believe Tunisia has the potential to become a leading hub for intelligent education and educational technologies in Africa and internationally. Through pedagogical innovation, learning sciences research, artificial intelligence, and digital transformation, a new educational ecosystem is emerging to reinvent teaching, training, and student support.",
+
+"paragraph3": "to support EduLink startups, educational institutions, and innovative project leaders in building high-impact digital solutions. Through training programs, mentorship, conferences, webinars, and entrepreneurial support initiatives, the Collider helps transform ideas into EdTech startups capable of modernizing education and training through intelligent technologies and artificial intelligence.",
+
+"highlight": "The Tunisian EduLink Collider aims"
+  }
+  ,
+  "team": {
+    "title": "Meet Our Team",
+    "description": "Passionate experts building the future of education technology",
+
+     "sonia": {
+  "role": "Instructional Engineering Expert",
+  "company": "ISET Sousse, Tunisia",
+  "bio": "Computer science lecturer and instructional engineering expert, Sonia Sahli is the creator of SonyPlanner. Her expertise in UI/UX Design and collaborations with several European universities reflect her commitment to educational innovation."
+},
+
+"denis": {
+  "role": "President of Graasp.org",
+  "company": "EPFL, Switzerland",
+  "bio": "University professor and president of Graasp.org, Denis Gillet leads the Interaction Systems Group at EPFL. He is a member of the IEEE Education Committee and co-founder of the Swiss EdTech Collider."
+},
+
+"thierry": {
+  "role": "Senior Lecturer",
+  "company": "Avignon University, France",
+  "bio": "Expert in higher education pedagogy and digital innovation with nearly thirty years of experience. Thierry Spriet actively contributes to the digital transformation of higher education."
+},
+
+"ahmed": {
+  "role": "Full-Stack & AI Developer",
+  "company": "Freelance",
+  "bio": "Full-stack developer specialized in AI, cybersecurity, and scalable web systems. Organizer at GDG Sousse."
+},
+
+"maram": {
+  "role": "Full-Stack & AI Developer",
+  "company": "Scorton",
+  "bio": "Passionate about development and digital technologies, Maram contributes to creating modern and high-performance digital experiences."
+}
+  },
+  "features": {
+  "coworking": "An innovation and collaboration space dedicated to EdTech startups, digital pedagogy, and artificial intelligence projects applied to education, fostering creativity, experimentation, and the development of intelligent educational solutions.",
+
+  "p2p": "Collaborative learning, mentorship, and knowledge-sharing programs focused on pedagogy, AI, digital transformation, educational webinars, and innovative approaches to intelligent learning.",
+
+  "ecosystem": "An ecosystem bringing together educational institutions, researchers, startups, investors, digital experts, and public stakeholders to promote educational innovation and the goals of SDG 4 – Quality Education.",
+
+  "events": "Organization of conferences, training programs, webinars, workshops, hackathons, and support initiatives designed to transform innovative ideas into high-impact EdTech startups.",
+
+  "collisions": "Creating synergies between students, entrepreneurs, researchers, and organizations to accelerate the integration of intelligent technologies, artificial intelligence, and digital solutions into education and training."
+},
+  
+  "testimonials": {
+    "title": "What Our Members Say",
+    "subtitle": "Discover experiences from startups in our Tunisian EduLink ecosystem",
+    "cta": "A community growing every day",
+
+    "t1": { "quote": "Joining the Tunisian EduLink Collider allowed us to connect with key players.", "role": "Co-Founder & CPO" },
+    "t2": { "quote": "We found a rich ecosystem and strong strategic connections.", "role": "President" },
+    "t3": { "quote": "A powerful network that accelerated our growth.", "role": "Co-Founder" },
+    "t4": { "quote": "A platform that opens doors to mentors and investors.", "role": "Co-Founder" },
+    "t5": { "quote": "A huge advantage for accessing key opportunities.", "role": "CEO & Founder" },
+    "t6": { "quote": "An inspiring place to work and meet innovators.", "role": "CEO & Founder" }
+  
+},
+"ripu": {
+  "label": "Flagship Initiative",
+  "title": "RIPU 25",
+  "subtitle": "Shaping the Future of Education",
+  "description": "RIPU 25 is an international initiative bringing together educators, researchers, and innovators to rethink higher education in the age of artificial intelligence and digital transformation, fostering collaboration and shaping the future of learning.",
+  "cta": "Discover RIPU 25",
+  "galleryLabel": "RIPU 25",
+"galleryTitle": "Highlights from",
+"galleryHighlight": "RIPU 25",
+"galleryDescription": "Key moments, innovation, networking and community during RIPU 2025. A new edition of RIPU will be announced soon."
+},
+"smartExam": {
+    "label": "Achievement",
+    "description": "An intelligent examination platform designed to enhance learning through AI-driven insights, adaptive assessments, and personalized education experiences.",
+
+    "aiTitle": "AI-Powered Analysis",
+    "aiDescription": "Advanced artificial intelligence analyzes performance and delivers personalized recommendations for improvement.",
+
+    "educationTitle": "Modern Education",
+    "educationDescription": "Built to transform the educational experience with smarter evaluations and adaptive learning systems.",
+
+    "award": "IEEE Entrepreneurship Winner",
+
+    "awardDescription": "Winner of the IEEE Entrepreneurship Competition for innovation in AI-powered education technology."
+  }
+
+}
+  

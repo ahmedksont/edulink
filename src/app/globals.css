@@ -1,26 +1,70 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+  @apply bg-background text-foreground;
+  overflow-x: hidden;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  ::selection {
+    @apply bg-cyan-500/30 text-cyan-200;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-600;
+  }
+  
+  .glass {
+    @apply bg-slate-900/50 backdrop-blur-xl border border-slate-800;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-950;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-800 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-700;
+}
+
+/* Canvas container */
+canvas {
+  touch-action: none;
+}
+:root {
+  --primary: #c538f8; /* cyan-400 */
+}
+
+.dark {
+  --primary: #f838ef;
+}
+
+/* globals.css */
+.input {
+  @apply w-full px-4 py-3 rounded-full bg-white/90 text-black placeholder:text-gray-500 outline-none border-2 border-gray-300 focus:border-white focus:ring-2 focus:ring-white/50 transition;
+}
+
+.textarea {
+  @apply w-full px-5 py-3 rounded-2xl bg-white/90 text-black placeholder:text-gray-500 outline-none border-2 border-gray-300 focus:border-white focus:ring-2 focus:ring-white/50 transition resize-none;
+}
+
+.btn {
+  @apply w-full flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white text-gray-900 font-semibold hover:bg-white/90 hover:scale-[1.02] transition-all duration-300 border-2 border-white/20;
 }
