@@ -201,7 +201,7 @@ export default function TagCanvas() {
     World.add(world, [ground, wallLeft, wallRight, roof])
 
     // Sync Matter.js bodies with HTML elements
-    const tags = containerElement.querySelectorAll(".tag")
+    const tags = containerElement.querySelectorAll<HTMLElement>(".tag")
     const tagBodies = Array.from(tags).map((tag) => {
       const width = tag.offsetWidth
       const height = tag.offsetHeight
