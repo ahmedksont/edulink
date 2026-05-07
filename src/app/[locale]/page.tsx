@@ -1,5 +1,11 @@
-import { HeroSection } from "../../../components/sections/hero-section";
-import { AboutSection } from "../../../components/sections/about-section";
+"use client";
+
+import { useEffect, useState } from "react";
+
+import FullScreenLoader from "@/components/loader/FullScreenLoader";
+
+import { HeroSection } from "@/components/sections/hero-section";
+import { AboutSection } from "@/components/sections/about-section";
 import { ProgramsSection } from "../../../components/sections/programs-section";
 import { TeamSection } from "../../../components/sections/community-section";
 import { ContactSection } from "../../../components/sections/contact-section";
@@ -9,6 +15,20 @@ import { RipuSection } from "@/components/sections/ripu-section";
 import { SmartExamSection } from "@/components/sections/smartexams-section";
 
 export default function HomePage() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2500); // durée du loader
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <FullScreenLoader />;
+  }
+
   return (
     <>
       <section id="home">
@@ -30,7 +50,8 @@ export default function HomePage() {
       <section id="ripu">
         <RipuSection />
       </section>
-      <section id="smart-exam" >
+
+      <section id="smart-exam">
         <SmartExamSection />
       </section>
 
