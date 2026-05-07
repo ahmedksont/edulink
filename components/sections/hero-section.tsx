@@ -57,12 +57,9 @@ export function HeroSection() {
       {/* 🌌 BACKGROUND */}
       <div className="absolute inset-0 z-0">
         {/* Desktop 3D Scene */}
-        <div className="hidden md:block">
+        
           <HeroScene />
-        </div>
 
-        {/* Mobile fallback */}
-        <div className="md:hidden absolute inset-0 bg-gradient-to-br from-violet-950 via-black to-black" />
       </div>
 
       {/* OVERLAYS */}
