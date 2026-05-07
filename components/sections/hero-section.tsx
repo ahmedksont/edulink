@@ -6,7 +6,12 @@ import { useTranslations } from "next-intl";
 import { AnimatedText } from "@/components/ui/animated-text";
 import { MagneticButton } from "@/components/ui/magnetic-button";
 import { ChevronDown } from "lucide-react";
-import HeroScene from "../3d/HeroScene";
+import dynamic from "next/dynamic";
+
+const HeroScene = dynamic(
+  () => import("../3d/HeroScene"),
+  { ssr: false }
+);
 
 export function HeroSection() {
   const t = useTranslations("hero");
