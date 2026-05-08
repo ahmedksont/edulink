@@ -74,9 +74,6 @@
 "highlight": "Der tunesische EduLink Collider verfolgt das Ziel"
   },
   
-  "team": {
-    "title": "Unser Team",
-    "description": "Engagierte Experten, die die Zukunft der Bildungstechnologie gestalten",
 
     "team": {
   "label": "Unser Team",
@@ -125,7 +122,7 @@
     "bio": "Leidenschaftlich für Entwicklung und digitale Technologien engagiert sich Maram für moderne und leistungsstarke digitale Erlebnisse."
   }
 }
-  },
+  ,
   
 "features": {
   "coworking": "Ein Innovations- und Kollaborationsraum für EdTech-Startups, digitale Pädagogik und KI-Projekte im Bildungsbereich, der Kreativität, Experimentierung und die Entwicklung intelligenter Bildungslösungen fördert.",
