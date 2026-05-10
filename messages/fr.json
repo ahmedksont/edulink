@@ -9,13 +9,14 @@
     "ripu": "RIPU"
   },
   "hero": {
-    "title": "EduLink\nTunisien EdTech Collider",
+    "title": "Edu Link",
+    "sub-title": "Tunisien EdTech Collider",
     "subtitle": "Où l'éducation et la technologie se rencontrent",
     "cta": "Découvrir"
   },
   "about": {
     "title": "À propos",
-    "description": "Le EduLink Collider Tunisien connecte startups EdTech, institutions éducatives, chercheurs et investisseurs pour construire une nouvelle génération d’éducation intelligente basée sur la pédagogie numérique, l’intelligence artificielle et l’innovation."
+    "description": "Le EduLink connecte les startups EdTech, institutions éducatives, chercheurs et investisseurs pour construire une nouvelle génération d’éducation intelligente basée sur la pédagogie numérique, l’intelligence artificielle et l’innovation."
   },
   "programs": {
     "title": "Programmes",
@@ -48,7 +49,7 @@
       "faq": "FAQ"
     },
 
-    "address": "Tunis, Tunisie",
+    "address": "Sousse, Tunisie",
     "email": "contact@edulink.tn",
     "phone": "+216 XX XXX XXX",
     "placeholder": "Votre email",
@@ -63,7 +64,7 @@
 
 "paragraph3": "à accompagner les startups EduLink, les établissements éducatifs et les porteurs d’idées innovantes dans la création de solutions numériques à fort impact. À travers des programmes de formation, du mentorat, des conférences, des webinaires et des initiatives d’accompagnement entrepreneurial, le Collider aide à transformer les idées en startups EdTech capables de moderniser l’éducation et la formation grâce aux technologies intelligentes et à l’intelligence artificielle.",
 
-"highlight": "Le EduLink Collider Tunisien vise"
+"highlight": "Le EdTech Collider Tunisien vise"
   
 },
  
@@ -119,7 +120,7 @@
     "cta": "Une communauté qui grandit chaque jour",
 
     "t1": {
-      "quote": "Rejoindre le Tunisian EduLink Collider nous a permis d’intégrer un écosystème dynamique et de collaborer avec des acteurs clés.",
+      "quote": "Rejoindre EduLink Collider nous a permis d’intégrer un écosystème dynamique et de collaborer avec des acteurs clés.",
       "role": "Co-fondatrice & CPO"
     },
     "t2": {

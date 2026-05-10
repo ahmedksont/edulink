@@ -4,13 +4,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-const images = [
-  "/ripu1.png",
-  "/ripu2.png",
-  "/ripu3.png",
-  "/ripu4.png",
-];
-
 const ripuGallery = [
   "/p1.jpg",
   "/p2.jpg",
@@ -36,49 +29,54 @@ export function RipuSection() {
       {/* TOP SEPARATOR */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl h-px bg-gradient-to-r from-transparent via-violet-300/50 to-transparent" />
 
-      {/* GLOW */}
+      {/* BACKGROUND GLOW */}
       <div className="absolute inset-0 flex justify-center pointer-events-none">
         <div className="w-[900px] h-[400px] bg-violet-500/10 blur-[140px] rounded-full" />
       </div>
 
       <div className="relative max-w-7xl mx-auto z-10">
-        {/* ========================================= */}
-        {/* TOP CONTENT */}
-        {/* ========================================= */}
+        {/* ================================================= */}
+        {/* HERO CONTENT */}
+        {/* ================================================= */}
 
-        <div className="grid md:grid-cols-2 gap-16 items-center mb-12">
-          {/* TEXT */}
+        <div className="grid md:grid-cols-2 gap-20 items-center">
+          {/* LEFT CONTENT */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
-            {/* LABEL */}
-            <span className="inline-block px-4 py-1.5 mb-6 rounded-full bg-violet-100 text-violet-700 text-sm font-medium">
-              {t("label")}
-            </span>
-
             {/* TITLE */}
             <h2
               className="
-              font-display
-              text-4xl
-              md:text-6xl
-              font-semibold
-              tracking-[-0.04em]
-              leading-[0.95]
-              mb-6
-              text-black
-            "
+                font-display
+                text-4xl
+                md:text-6xl
+                font-black
+                tracking-[-0.05em]
+                leading-[0.95]
+                text-black
+                mb-8
+              "
             >
               {t("title")} —{" "}
-              <span className="bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-violet-500 via-fuchsia-500 to-purple-500 bg-clip-text text-transparent">
                 {t("subtitle")}
               </span>
             </h2>
 
             {/* DESCRIPTION */}
-            <p className="text-black/60 text-lg leading-relaxed mb-8 max-w-xl">
+            <p
+              className="
+                text-black/60
+                text-lg
+                md:text-xl
+                leading-relaxed
+                max-w-xl
+                mb-10
+              "
+            >
               {t("description")}
             </p>
 
@@ -88,125 +86,159 @@ export function RipuSection() {
               target="_blank"
               rel="noopener noreferrer"
               className="
-                inline-flex items-center
-                px-6 py-3
+                inline-flex
+                items-center
+                justify-center
+
+                px-7
+                py-4
+
                 rounded-full
-                bg-gradient-to-r from-violet-500 to-fuchsia-500
+
+                bg-gradient-to-r
+                from-violet-500
+                to-fuchsia-500
+
                 text-white
                 font-semibold
-                tracking-tight
-                shadow-[0_10px_40px_rgba(139,92,246,0.35)]
+                text-lg
+
+                shadow-[0_15px_50px_rgba(139,92,246,0.35)]
+
                 hover:scale-105
-                transition-all duration-300
+                hover:shadow-[0_20px_70px_rgba(139,92,246,0.45)]
+
+                transition-all
+                duration-300
               "
             >
               {t("cta")}
             </a>
           </motion.div>
 
-          {/* LOGO */}
+          {/* RIGHT POSTER */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.9, y: 30 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="flex justify-center md:justify-end"
+            className="flex justify-center md:justify-end relative"
           >
-            <div className="w-[280px] h-[120px] md:w-[420px] md:h-[170px] relative">
-              <Image
-                src="/logoripu.png"
-                alt="RIPU Logo"
-                fill
-                className="object-contain"
-              />
-            </div>
-          </motion.div>
-        </div>
+            {/* BACKGROUND GLOW */}
+            <div
+              className="
+                absolute
 
-        {/* ========================================= */}
-        {/* TOP IMAGES */}
-        {/* ========================================= */}
+                w-[320px]
+                h-[320px]
 
-        <div className="relative flex justify-center items-center gap-6 flex-wrap md:flex-nowrap">
-          {images.map((src, i) => (
+                md:w-[420px]
+                md:h-[420px]
+
+                bg-violet-500/20
+                blur-[120px]
+                rounded-full
+
+                top-1/2
+                left-1/2
+
+                -translate-x-1/2
+                -translate-y-1/2
+
+                pointer-events-none
+              "
+            />
+
+            {/* POSTER */}
             <motion.div
-  key={i}
-  initial={{
-    opacity: 0,
-    y: 40,
-    rotate: -5,
-  }}
-  whileInView={{
-    opacity: 1,
-    y: 0,
-    rotate: i % 2 === 0 ? -4 : 4,
-  }}
-  transition={{
-    delay: i * 0.1,
-  }}
-  viewport={{ once: true }}
-  className="
-    relative
-    w-[72vw]
-    h-[160px]
-    sm:w-[78vw]
-    sm:h-[190px]
-    md:w-[360px]
-    md:h-[170px]
-    rounded-3xl
-    overflow-hidden
-    shadow-[0_10px_40px_rgba(0,0,0,0.12)]
-    group
-  "
->
+              whileHover={{
+                y: -8,
+                scale: 1.02,
+              }}
+              transition={{
+                duration: 0.4,
+              }}
+              className="
+                relative
+                z-10
+
+                w-[260px]
+                h-[360px]
+
+                md:w-[360px]
+                md:h-[500px]
+
+                rounded-[32px]
+                overflow-hidden
+
+                border border-white/20
+
+                shadow-[0_30px_80px_rgba(0,0,0,0.25)]
+
+                group
+              "
+            >
               <Image
-                src={src}
-                alt={`RIPU ${i}`}
+                src="/ripu.jpg"
+                alt="RIPU Poster"
                 fill
                 className="
                   object-cover
-                  scale-105
-                  group-hover:scale-125
                   transition-transform
                   duration-700
-                  ease-out
+                  group-hover:scale-105
                 "
               />
 
               {/* OVERLAY */}
               <div
                 className="
-                  absolute inset-0
-                  bg-black/10
-                  group-hover:bg-black/0
-                  transition duration-500
+                  absolute
+                  inset-0
+
+                  bg-gradient-to-t
+                  from-black/10
+                  via-transparent
+                  to-white/10
+                "
+              />
+
+              {/* LIGHT REFLECTION */}
+              <div
+                className="
+                  absolute
+                  inset-0
+
+                  bg-gradient-to-br
+                  from-white/20
+                  via-transparent
+                  to-transparent
+
+                  opacity-60
                 "
               />
             </motion.div>
-          ))}
+          </motion.div>
         </div>
 
-        {/* ========================================= */}
-        {/* RIPU 25 GALLERY */}
-        {/* ========================================= */}
+        {/* ================================================= */}
+        {/* GALLERY */}
+        {/* ================================================= */}
 
-        <div className="mt-32">
-          {/* TITLE */}
+        <div className="mt-36">
+          {/* GALLERY TITLE */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <span className="inline-block px-4 py-1.5 mb-5 rounded-full bg-violet-100 text-violet-700 text-sm font-medium">
-              {t("galleryLabel")}
-            </span>
-
             <h3
               className="
                 font-display
                 text-4xl
                 md:text-6xl
-                font-semibold
+                font-black
                 tracking-[-0.04em]
                 leading-[0.95]
                 text-black
@@ -218,7 +250,7 @@ export function RipuSection() {
               </span>
             </h3>
 
-            <p className="mt-5 text-black/60 text-lg max-w-2xl mx-auto">
+            <p className="mt-5 text-black/60 text-lg max-w-2xl mx-auto leading-relaxed">
               {t("galleryDescription")}
             </p>
           </motion.div>
@@ -243,60 +275,69 @@ export function RipuSection() {
               }}
               className="flex gap-6 w-max"
             >
-              {[...ripuGallery, ...ripuGallery].map(
-                (src, i) => (
-                  <motion.div
-                    key={i}
-                    whileHover={{
-                      y: -10,
-                      scale: 1.03,
-                    }}
-                    transition={{
-                      duration: 0.35,
-                    }}
-                    className="
-                      relative
-                      w-[320px]
-                      h-[220px]
-                      md:w-[420px]
-                      md:h-[280px]
-                      rounded-3xl
-                      overflow-hidden
-                      shrink-0
-                      bg-white
-                      border border-black/5
-                      shadow-[0_10px_40px_rgba(0,0,0,0.08)]
-                      group
-                    "
-                  >
-                    <Image
-                      src={src}
-                      alt={`RIPU Gallery ${i}`}
-                      fill
-                      className="
-                        object-cover
-                        transition-transform
-                        duration-700
-                        group-hover:scale-110
-                      "
-                    />
+              {[...ripuGallery, ...ripuGallery].map((src, i) => (
+                <motion.div
+                  key={i}
+                  whileHover={{
+                    y: -10,
+                    scale: 1.03,
+                  }}
+                  transition={{
+                    duration: 0.35,
+                  }}
+                  className="
+                    relative
 
-                    {/* OVERLAY */}
-                    <div
-                      className="
-                        absolute inset-0
-                        bg-gradient-to-t
-                        from-black/30
-                        via-transparent
-                        to-transparent
-                        opacity-60
-                        group-hover:opacity-30
-                        transition
-                      "
-                    />
-                  </motion.div>
-                )
-              )}
+                    w-[320px]
+                    h-[220px]
+
+                    md:w-[420px]
+                    md:h-[280px]
+
+                    rounded-3xl
+                    overflow-hidden
+                    shrink-0
+
+                    bg-white
+
+                    border border-black/5
+
+                    shadow-[0_10px_40px_rgba(0,0,0,0.08)]
+
+                    group
+                  "
+                >
+                  <Image
+                    src={src}
+                    alt={`RIPU Gallery ${i}`}
+                    fill
+                    className="
+                      object-cover
+                      transition-transform
+                      duration-700
+                      group-hover:scale-110
+                    "
+                  />
+
+                  {/* Overlay */}
+                  <div
+                    className="
+                      absolute
+                      inset-0
+
+                      bg-gradient-to-t
+                      from-black/30
+                      via-transparent
+                      to-transparent
+
+                      opacity-60
+                      group-hover:opacity-30
+
+                      transition
+                    "
+                  />
+                </motion.div>
+              ))}
             </motion.div>
           </div>
         </div>

@@ -1,0 +1,6 @@
+new RGBELoader()
+  .setPath('/hdr/')
+  .load('potsdamer_platz_1k.hdr', (texture) => {
+    texture.mapping = THREE.EquirectangularReflectionMapping;
+    scene.environment = texture;
+  });

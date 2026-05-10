@@ -9,13 +9,14 @@
     "achievement": "Achievement"
   },
   "hero": {
-    "title": "EduLink\nTunisien EdTech Collider",
+    "title": "Edu Link",
+      "sub-title":"Tunisien EdTech Collider",
     "subtitle": "Where education and technology collide",
     "cta": "Discover"
   },
   "about": {
     "title": "About",
-    "description": "The Tunisian EduLink Collider connects EdTech startups, educational institutions, researchers, and investors to build a new generation of intelligent education driven by digital pedagogy, artificial intelligence, and innovation."
+    "description": "The EduLink connects EdTech startups, educational institutions, researchers, and investors to build a new generation of intelligent education driven by digital pedagogy, artificial intelligence, and innovation."
   },
   "programs": {
     "title": "Programs",
@@ -58,7 +59,7 @@
       "faq": "FAQ"
     },
 
-    "address": "Tunis, Tunisia",
+    "address": "Sousse, Tunisia",
     "email": "contact@EduLink.tn",
     "phone": "+216 XX XXX XXX",
     "placeholder": "Your email",
@@ -71,7 +72,7 @@
 
 "paragraph3": "to support EduLink startups, educational institutions, and innovative project leaders in building high-impact digital solutions. Through training programs, mentorship, conferences, webinars, and entrepreneurial support initiatives, the Collider helps transform ideas into EdTech startups capable of modernizing education and training through intelligent technologies and artificial intelligence.",
 
-"highlight": "The Tunisian EduLink Collider aims"
+"highlight": "The Tunisian Collider aims"
   }
   ,
   "team": {

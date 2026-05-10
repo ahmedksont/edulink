@@ -9,13 +9,14 @@
     "achievement": "Errungenschaft"
   },
   "hero": {
-    "title": "EduLink\nTunisien EdTech Collider",
+    "title": "Edu Link",
+    "sub-title":"Tunisien EdTech Collider",
     "subtitle": "Wo Bildung und Technologie zusammenkommen",
     "cta": "Entdecken"
   },
   "about": {
     "title": "Über uns",
-    "description": "Der tunesische EduLink Collider verbindet EdTech-Startups, Bildungseinrichtungen, Forschende und Investoren, um eine neue Generation intelligenter Bildung aufzubauen, die auf digitaler Pädagogik, künstlicher Intelligenz und Innovation basiert."
+    "description": "Der EduLink verbindet EdTech-Startups, Bildungseinrichtungen, Forschende und Investoren, um eine neue Generation intelligenter Bildung aufzubauen, die auf digitaler Pädagogik, künstlicher Intelligenz und Innovation basiert."
   },
   "programs": {
     "title": "Programme",
@@ -58,7 +59,7 @@
       "faq": "FAQ"
     },
 
-    "address": "Tunis, Tunesien",
+    "address": "Sousse, Tunesien",
     "email": "contact@EduLink.tn",
     "phone": "+216 XX XXX XXX",
     "placeholder": "Ihre E-Mail",
@@ -71,7 +72,7 @@
 
 "paragraph3": "EduLink-Startups, Bildungseinrichtungen und innovative Projektträger bei der Entwicklung digitaler Lösungen mit hoher Wirkung zu unterstützen. Durch Ausbildungsprogramme, Mentoring, Konferenzen, Webinare und unternehmerische Begleitung hilft der Collider dabei, Ideen in EdTech-Startups zu verwandeln, die Bildung und Ausbildung mithilfe intelligenter Technologien und künstlicher Intelligenz modernisieren.",
 
-"highlight": "Der tunesische EduLink Collider verfolgt das Ziel"
+"highlight": "Der tunesische Collider verfolgt das Ziel"
   },
   
 

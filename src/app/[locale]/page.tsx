@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import FullScreenLoader from "@/components/loader/FullScreenLoader";
 
-import { HeroSection } from "@/components/sections/hero-section";
+import { HeroSection } from "@/components/sections/hero-section-new";
 import { AboutSection } from "@/components/sections/about-section";
 import { ProgramsSection } from "../../../components/sections/programs-section";
 import { TeamSection } from "../../../components/sections/community-section";
