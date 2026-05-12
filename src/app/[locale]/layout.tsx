@@ -56,7 +56,6 @@ export default async function LocaleLayout({
         attribute="class"
         defaultTheme="light"
       >
-        <SmoothScrollProvider>
           <div
             className={`${clash.variable} ${satoshi.variable} relative min-h-screen font-sans`}
           >
@@ -68,7 +67,6 @@ export default async function LocaleLayout({
 
             <Footer />
           </div>
-        </SmoothScrollProvider>
       </ThemeProvider>
     </NextIntlClientProvider>
   );

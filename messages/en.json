@@ -10,7 +10,7 @@
   },
   "hero": {
     "title": "Edu Link",
-      "sub-title":"Tunisien EdTech Collider",
+      "sub-title":"Tunisien  EdTech Development Network",
     "subtitle": "Where education and technology collide",
     "cta": "Discover"
   },
@@ -61,7 +61,7 @@
 
     "address": "Sousse, Tunisia",
     "email": "contact@EduLink.tn",
-    "phone": "+216 XX XXX XXX",
+    "phone": "+216 55 595 234",
     "placeholder": "Your email",
 
     "rights": "All rights reserved • Developed by {name}"
@@ -88,7 +88,7 @@
 "denis": {
   "role": "President of Graasp.org",
   "company": "EPFL, Switzerland",
-  "bio": "University professor and president of Graasp.org, Denis Gillet leads the Interaction Systems Group at EPFL. He is a member of the IEEE Education Committee and co-founder of the Swiss EdTech Collider."
+  "bio": "University professor and president of Graasp.org, Denis Gillet leads the Interaction Systems Group at EPFL. He is a member of the IEEE Education Committee and co-founder of the Swiss  EdTech Development Network."
 },
 
 "thierry": {

@@ -75,14 +75,14 @@ export function HeroSection() {
         >
           {/* Mobile video */}
           <source
-            src="/mobile-video.mp4"
+            src="/mobile.mp4"
             type="video/mp4"
             media="(max-width: 767px)"
           />
 
           {/* Desktop video */}
           <source
-            src="/new.mp4"
+            src="/desktop.mp4"
             type="video/mp4"
             media="(min-width: 768px)"
           />
