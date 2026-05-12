@@ -242,12 +242,6 @@ export function Footer() {
                 <Send size={16} />
               </button>
             </form>
-
-            {success && (
-              <p className="text-green-600 text-sm mt-2">
-                {t("success")}
-              </p>
-            )}
           </div>
         </div>
 

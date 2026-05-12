@@ -14,6 +14,8 @@ import {
 
 import { Send } from "lucide-react";
 
+import { toast } from "sonner";
+
 export function ContactSection() {
   const t = useTranslations("contact");
   const locale = useLocale();
@@ -26,9 +28,6 @@ export function ContactSection() {
   );
 
   const [loading, setLoading] =
-    useState(false);
-
-  const [success, setSuccess] =
     useState(false);
 
   const [formData, setFormData] =
@@ -79,7 +78,9 @@ export function ContactSection() {
       );
 
       if (res.ok) {
-        setSuccess(true);
+        toast.success(
+          "Message sent successfully 🚀"
+        );
 
         setFormData({
           firstName: "",
@@ -87,13 +88,17 @@ export function ContactSection() {
           email: "",
           message: "",
         });
-
-        setTimeout(() => {
-          setSuccess(false);
-        }, 4000);
+      } else {
+        toast.error(
+          "Something went wrong ❌"
+        );
       }
     } catch (error) {
       console.error(error);
+
+      toast.error(
+        "Failed to send message ❌"
+      );
     } finally {
       setLoading(false);
     }
@@ -236,12 +241,6 @@ export function ContactSection() {
                   ? "Sending..."
                   : t("cta")}
               </button>
-
-              {success && (
-                <p className="text-green-400 text-sm">
-                  Message sent successfully 🚀
-                </p>
-              )}
             </form>
           </div>
         </motion.div>
