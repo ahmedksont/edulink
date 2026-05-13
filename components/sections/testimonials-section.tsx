@@ -11,57 +11,35 @@ export default function TestimonialsSection() {
   const testimonials = [
     {
       key: "t1",
-      author: "Maria Beltran",
+      author: "Vittorio Stile,",
       roleKey: "t1.role",
-      company: "Zoe Immersive",
+      company: "Italy",
       stars: 5,
-      rotation: "-rotate-12",
+      rotation: "-rotate-6",
+      image: "/vittorio.jpeg",
     },
     {
       key: "t2",
-      author: "Christophe Barraud",
+      author: "Souhir M'rabet",
       roleKey: "t2.role",
-      company: "Mobsya",
+      company: "Paris",
       stars: 5,
-      rotation: "rotate-6",
+      rotation: "rotate-3",
+      image: "/souhir.jpeg",
     },
     {
       key: "t3",
-      author: "Gauthier Dubruel",
+      author: "Azza Lotfi ",
       roleKey: "t3.role",
-      company: "UbiSim",
+      company: "Tunisie",
       stars: 5,
-      rotation: "rotate-8",
-    },
-    {
-      key: "t4",
-      author: "Omar Luethi",
-      roleKey: "t4.role",
-      company: "Dual Academy",
-      stars: 5,
-      rotation: "-rotate-6",
-    },
-    {
-      key: "t5",
-      author: "Stephane Coillet-Matillon",
-      roleKey: "t5.role",
-      company: "Kiwix",
-      stars: 5,
-      rotation: "rotate-5",
-    },
-    {
-      key: "t6",
-      author: "Govinda Upadhyay",
-      roleKey: "t6.role",
-      company: "LEDsafari",
-      stars: 5,
-      rotation: "-rotate-4",
+      rotation: "rotate-6",
+      image: "/azza.jpeg",
     },
   ];
 
   return (
     <section className="py-24 bg-white relative overflow-hidden">
-      
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-96 h-96 bg-violet-500/5 rounded-full blur-3xl" />
@@ -69,7 +47,6 @@ export default function TestimonialsSection() {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        
         {/* HEADER */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -82,36 +59,51 @@ export default function TestimonialsSection() {
         </div>
 
         {/* CARDS */}
-        <div className="flex flex-wrap justify-center items-stretch gap-8 max-w-7xl mx-auto">
+        <div className="flex flex-wrap justify-center items-stretch gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => {
-            const isCorner = index === 0 || index === testimonials.length - 1;
-            const isCenter = index > 0 && index < testimonials.length - 1;
+            const isLeft = index === 0;
+            const isCenter = index === 1;
+            const isRight = index === 2;
 
             return (
               <div
                 key={testimonial.key}
-                className={`relative transition-all duration-500 ${testimonial.rotation} ${
-                  isCorner
-                    ? hoveredCard === index
-                      ? "opacity-100 scale-110 z-20"
-                      : "opacity-40 scale-95 z-10"
-                    : "opacity-100 scale-100 z-15"
-                } ${hoveredCard === index ? "rotate-0" : ""}`}
-                style={{
-                  transform:
-                    hoveredCard === index ? "rotate(0deg) scale(1.1)" : "",
-                }}
+                className={`
+                  relative
+                  transition-all
+                  duration-500
+                  ${testimonial.rotation}
+
+                  ${
+                    hoveredCard === index
+                      ? "scale-110 z-20 rotate-0"
+                      : isCenter
+                      ? "scale-100 opacity-100 z-10"
+                      : "scale-95 opacity-70 z-0"
+                  }
+                `}
                 onMouseEnter={() => setHoveredCard(index)}
                 onMouseLeave={() => setHoveredCard(null)}
               >
                 <div
-                  className={`bg-gray-900 rounded-2xl p-6 w-80 min-h-[380px] transition-all duration-500 flex flex-col ${
-                    hoveredCard === index && isCorner
-                      ? "shadow-2xl shadow-violet-500/30 border-2 border-violet-500/60 ring-4 ring-violet-500/30"
-                      : isCenter
-                      ? "shadow-xl border border-gray-800"
-                      : "shadow-lg border border-gray-800/60"
-                  }`}
+                  className={`
+                    bg-gray-900
+                    rounded-2xl
+                    p-6
+                    w-80
+                    min-h-[380px]
+                    transition-all
+                    duration-500
+                    flex
+                    flex-col
+                    border
+
+                    ${
+                      hoveredCard === index
+                        ? "shadow-2xl shadow-violet-500/30 border-violet-500/60 ring-4 ring-violet-500/20"
+                        : "border-gray-800"
+                    }
+                  `}
                 >
                   {/* Stars */}
                   <div className="flex mb-4 gap-1">
@@ -127,17 +119,30 @@ export default function TestimonialsSection() {
                   <Quote className="h-6 w-6 text-violet-500/30 mb-3" />
 
                   {/* Quote */}
-                  <p className="text-gray-300 mb-6 text-sm leading-relaxed line-clamp-6 flex-1">
+                  <p className="text-gray-300 mb-6 text-sm leading-relaxed flex-1">
                     "{t(`${testimonial.key}.quote`)}"
                   </p>
 
                   {/* Author */}
                   <div className="flex items-center mt-auto pt-4 border-t border-gray-800">
-                    <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 bg-violet-500/20 flex items-center justify-center">
-                      <span className="text-violet-400 font-bold text-lg">
-                        {testimonial.author.charAt(0)}
-                      </span>
-                    </div>
+                    {/* USER PHOTO */}
+                    <img
+  src={testimonial.image}
+  alt={testimonial.author}
+  className="
+    w-16
+    h-16
+    md:w-20
+    md:h-20
+    rounded-full
+    object-cover
+    mr-4
+    flex-shrink-0
+    border-2
+    border-violet-500/40
+    shadow-lg
+  "
+/>
 
                     <div className="flex-1 min-w-0">
                       <div className="font-bold text-white text-sm truncate">

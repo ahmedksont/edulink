@@ -126,12 +126,9 @@
     "subtitle": "Discover experiences from startups in our Tunisian EduLink ecosystem",
     "cta": "A community growing every day",
 
-    "t1": { "quote": "Joining the Tunisian EduLink Collider allowed us to connect with key players.", "role": "Co-Founder & CPO" },
-    "t2": { "quote": "We found a rich ecosystem and strong strategic connections.", "role": "President" },
-    "t3": { "quote": "A powerful network that accelerated our growth.", "role": "Co-Founder" },
-    "t4": { "quote": "A platform that opens doors to mentors and investors.", "role": "Co-Founder" },
-    "t5": { "quote": "A huge advantage for accessing key opportunities.", "role": "CEO & Founder" },
-    "t6": { "quote": "An inspiring place to work and meet innovators.", "role": "CEO & Founder" }
+    "t1":{ "quote": "My collaboration with Sonia started through the IEEE Entrepreneurship program on the Smart Exam project. She is a strong connector between academia and entrepreneurship, building valuable international collaborations 🇮🇹🇨🇭🇹🇳🇪🇬and turning ideas into real opportunities", "role": " PE, PhD" } ,
+    "t2": { "quote": "Very happy to have collaborated with Edulink. We had a great experience welcoming Tunisian students as interns at our startup. Skilleddevelopers who brought real value to our team. Thank you Edulink for this great connection!", "role": "CTO - The Schooly - Scorton" },
+    "t3": { "quote": "Edulink opens the door to investors and opportunities. Thanks to it, I was able to turn my smart agriculture project into a future startup.", "role": "Final-year student, Final year project" }
   
 },
 "ripu": {

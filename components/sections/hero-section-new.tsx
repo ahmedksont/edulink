@@ -163,16 +163,22 @@ export function HeroSection() {
 
     mt-2
 
-    text-3xl
-    sm:text-4xl
-    md:text-6xl
-    lg:text-[4.5rem]
+    text-xl
+    sm:text-2xl
+    md:text-4xl
+    lg:text-6xl
 
     font-medium
-    tracking-[-0.04em]
-    leading-[0.95]
 
-    mb-10
+    tracking-[-0.03em]
+
+    leading-[1.1]
+    sm:leading-[1]
+    
+    px-2
+    sm:px-0
+
+    mb-8
     md:mb-12
 
     text-white/90
@@ -185,7 +191,6 @@ export function HeroSection() {
     `,
   }}
 />
-
         {/* SUBTITLE */}
        <motion.p
   initial={{

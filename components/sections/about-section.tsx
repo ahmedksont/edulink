@@ -1,10 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import {
-  motion,
-  useInView,
-} from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 import { useTranslations } from "next-intl";
 
@@ -19,13 +16,6 @@ export function AboutSection() {
     once: true,
     margin: "-100px",
   });
-
-  const images = [
-    "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=900&h=900&fit=crop",
-    "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=900&h=900&fit=crop",
-    "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&h=900&fit=crop",
-    "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900&h=900&fit=crop",
-  ];
 
   return (
     <section
@@ -74,8 +64,6 @@ export function AboutSection() {
               duration: 0.8,
             }}
           >
-          
-
             {/* TITLE */}
             <AnimatedText
               text={t("title")}
@@ -172,91 +160,61 @@ export function AboutSection() {
             {/* GLOW */}
             <div className="absolute inset-0 bg-gradient-to-br from-violet-200/20 to-fuchsia-200/20 blur-3xl rounded-[3rem]" />
 
-            {/* IMAGE GRID */}
-            <div className="relative grid grid-cols-2 gap-6">
-              {images.map((img, i) => (
-                <motion.div
-                  key={i}
-                  initial={{
-                    opacity: 0,
-                    y: 40,
-                  }}
-                  animate={
-                    isInView
-                      ? {
-                          opacity: 1,
-                          y: 0,
-                        }
-                      : {}
-                  }
-                  transition={{
-                    duration: 0.7,
-                    delay: i * 0.12,
-                  }}
-                  whileHover={{
-                    y: -10,
-                    scale: 1.03,
-                  }}
-                  className={`
-                    relative
-                    aspect-square
-                    rounded-[2rem]
-                    overflow-hidden
-                    border border-black/[0.06]
-                    shadow-[0_20px_60px_rgba(0,0,0,0.10)]
-                    group
-                    bg-white
-                    ${
-                      i === 1
-                        ? "translate-y-10"
-                        : ""
-                    }
-                    ${
-                      i === 2
-                        ? "-translate-y-10"
-                        : ""
-                    }
-                  `}
-                >
-                  {/* IMAGE */}
-                  <img
-                    src={img}
-                    alt=""
-                    className="
-                      w-full
-                      h-full
-                      object-cover
-                      transition-transform
-                      duration-700
-                      group-hover:scale-110
-                    "
-                  />
+            {/* SINGLE IMAGE */}
+            <div className="relative">
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  y: 40,
+                }}
+                animate={
+                  isInView
+                    ? {
+                        opacity: 1,
+                        y: 0,
+                      }
+                    : {}
+                }
+                transition={{
+                  duration: 0.9,
+                  delay: 0.2,
+                }}
+                whileHover={{
+                  scale: 1.02,
+                }}
+                className="
+                  relative
+                  rounded-[2.5rem]
+                  overflow-hidden
+                  border border-black/[0.06]
+                  shadow-[0_30px_80px_rgba(0,0,0,0.12)]
+                  bg-white
+                "
+              >
+                <img
+                  src="/about.jpeg"
+                  alt="About"
+                  className="
+                    w-full
+                    h-full
+                    object-cover
+                    transition-transform
+                    duration-700
+                    hover:scale-105
+                  "
+                />
 
-                  {/* OVERLAY */}
-                  <div
-                    className="
-                      absolute inset-0
-                      bg-gradient-to-t
-                      from-black/40
-                      via-transparent
-                      to-transparent
-                      opacity-70
-                    "
-                  />
-
-                  {/* HOVER GLOW */}
-                  <div
-                    className="
-                      absolute inset-0
-                      opacity-0
-                      group-hover:opacity-100
-                      transition
-                      duration-500
-                      bg-violet-500/10
-                    "
-                  />
-                </motion.div>
-              ))}
+                {/* OVERLAY */}
+                <div
+                  className="
+                    absolute inset-0
+                    bg-gradient-to-t
+                    from-black/30
+                    via-transparent
+                    to-transparent
+                  "
+                />
+              </motion.div>
             </div>
 
             {/* FLOATING ORBS */}

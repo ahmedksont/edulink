@@ -143,12 +143,20 @@
     "subtitle": "Erfahrungen aus dem tunesischen EduLink-Ökosystem",
     "cta": "Eine Community, die täglich wächst",
 
-    "t1": { "quote": "Der Collider hat uns mit wichtigen Akteuren vernetzt.", "role": "Mitgründerin & CPO" },
-    "t2": { "quote": "Ein starkes Ökosystem mit wertvollen Kontakten.", "role": "Präsident" },
-    "t3": { "quote": "Ein Netzwerk, das unser Wachstum beschleunigt hat.", "role": "Mitgründer" },
-    "t4": { "quote": "Zugang zu Mentoren, Partnern und Investoren.", "role": "Mitgründer" },
-    "t5": { "quote": "Großer Vorteil für Chancen und Events.", "role": "CEO & Gründer" },
-    "t6": { "quote": "Ein inspirierender Ort für Innovation.", "role": "CEO & Gründer" }
+   "t1": {
+    "quote": "Meine Zusammenarbeit mit Sonia begann im Rahmen des IEEE Entrepreneurship-Programms beim Projekt Smart Exam. Sie ist eine starke Verbindung zwischen Wissenschaft und Unternehmertum, baut wertvolle internationale Kooperationen 🇮🇹🇨🇭🇹🇳🇪🇬 auf und verwandelt Ideen in echte Chancen.",
+    "role": "PE, PhD"
+  },
+
+  "t2": {
+    "quote": "Wir haben sehr gerne mit Edulink zusammengearbeitet. Es war eine großartige Erfahrung, tunesische Studierende als Praktikanten in unserem Startup willkommen zu heißen. Kompetente Entwickler, die unserem Team echten Mehrwert gebracht haben. Vielen Dank an Edulink für diese großartige Verbindung!",
+    "role": "CTO - The Schooly - Scorton"
+  },
+
+  "t3": {
+    "quote": "Edulink öffnet die Tür zu Investoren und neuen Möglichkeiten. Dank Edulink konnte ich mein Smart-Agriculture-Projekt in ein zukünftiges Startup verwandeln.",
+    "role": "Abschlussstudent, Abschlussprojekt"
+  }
   },
   "ripu": {
   "label": "Leuchtturmprojekt",
