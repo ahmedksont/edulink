@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
@@ -20,6 +21,12 @@ const ripuGallery = [
 
 export function RipuSection() {
   const t = useTranslations("ripu");
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
 
   return (
     <section
@@ -42,10 +49,10 @@ export function RipuSection() {
         <div className="grid md:grid-cols-2 gap-20 items-center">
           {/* LEFT CONTENT */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: isMobile ? 12 : 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: isMobile ? 0.3 : 0.6 }}
           >
             {/* TITLE */}
             <h2
@@ -118,9 +125,9 @@ export function RipuSection() {
 
           {/* RIGHT POSTER */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 30 }}
+            initial={{ opacity: 0, scale: isMobile ? 0.97 : 0.9, y: isMobile ? 10 : 30 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: isMobile ? 0.3 : 0.7 }}
             viewport={{ once: true }}
             className="flex justify-center md:justify-end relative"
           >
@@ -151,10 +158,9 @@ export function RipuSection() {
 
             {/* POSTER */}
             <motion.div
-              whileHover={{
-                y: -8,
-                scale: 1.02,
-              }}
+              whileHover={
+                isMobile ? {} : { y: -8, scale: 1.02 }
+              }
               transition={{
                 duration: 0.4,
               }}
@@ -228,9 +234,10 @@ export function RipuSection() {
         <div className="mt-36">
           {/* GALLERY TITLE */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: isMobile ? 10 : 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: isMobile ? 0.3 : 0.5 }}
             className="text-center mb-14"
           >
             <h3
@@ -278,10 +285,9 @@ export function RipuSection() {
               {[...ripuGallery, ...ripuGallery].map((src, i) => (
                 <motion.div
                   key={i}
-                  whileHover={{
-                    y: -10,
-                    scale: 1.03,
-                  }}
+                  whileHover={
+                    isMobile ? {} : { y: -10, scale: 1.03 }
+                  }
                   transition={{
                     duration: 0.35,
                   }}

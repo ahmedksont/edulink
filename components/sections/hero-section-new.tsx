@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { AnimatedText } from "@/components/ui/animated-text";
@@ -19,9 +19,11 @@ export function HeroSection() {
 
   const ref = useRef<HTMLDivElement>(null);
 
-  const isMobile =
-    typeof window !== "undefined" &&
-    window.innerWidth < 768;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -128,6 +130,7 @@ export function HeroSection() {
        {/* TITLE */}
 <AnimatedText
   text={t("title")}
+  reducedMotion={isMobile}
   className={`
     ${outfit.className}
     
@@ -145,7 +148,7 @@ export function HeroSection() {
 
     text-white
   `}
-  delay={0.1}
+  delay={isMobile ? 0 : 0.1}
   style={{
     textShadow: `
       0 0 12px rgba(167,139,250,0.25),
@@ -158,6 +161,7 @@ export function HeroSection() {
 {/* SUB TITLE */}
 <AnimatedText
   text={t("sub-title")}
+  reducedMotion={isMobile}
   className={`
     ${outfit.className}
 
@@ -183,7 +187,7 @@ export function HeroSection() {
 
     text-white/90
   `}
-  delay={0.2}
+  delay={isMobile ? 0.1 : 0.2}
   style={{
     textShadow: `
       0 0 10px rgba(139,92,246,0.12),
@@ -195,14 +199,15 @@ export function HeroSection() {
        <motion.p
   initial={{
     opacity: 0,
-    y: 20,
+    y: isMobile ? 8 : 20,
   }}
   animate={{
     opacity: 1,
     y: 0,
   }}
   transition={{
-    delay: 0.6,
+    delay: isMobile ? 0.2 : 0.6,
+    duration: isMobile ? 0.3 : 0.5,
   }}
   className={`
     ${outfit.className}
@@ -231,14 +236,15 @@ export function HeroSection() {
         <motion.div
           initial={{
             opacity: 0,
-            y: 20,
+            y: isMobile ? 8 : 20,
           }}
           animate={{
             opacity: 1,
             y: 0,
           }}
           transition={{
-            delay: 0.8,
+            delay: isMobile ? 0.3 : 0.8,
+            duration: isMobile ? 0.3 : 0.5,
           }}
         >
           <MagneticButton
@@ -276,13 +282,13 @@ export function HeroSection() {
           opacity: 1,
         }}
         transition={{
-          delay: 1.2,
+          delay: isMobile ? 0.5 : 1.2,
         }}
         className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 z-20"
       >
         <motion.div
           animate={{
-            y: [0, 10, 0],
+            y: [0, isMobile ? 6 : 10, 0],
           }}
           transition={{
             duration: 2,

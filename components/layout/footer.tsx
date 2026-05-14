@@ -148,7 +148,7 @@ export function Footer() {
                 (item) => (
                   <li key={item.key}>
                     <Link
-                      href={`/${locale}/${item.href}`}
+                     href={`/${locale}/#${item.href}`}
                       className="text-gray-600 hover:text-violet-500 transition"
                     >
                       {t(

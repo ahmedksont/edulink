@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import {
   motion,
   useInView,
@@ -14,6 +14,12 @@ export function VisionSection() {
   const t = useTranslations("vision");
 
   const ref = useRef(null);
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
 
   const isInView = useInView(ref, {
     once: true,
@@ -48,7 +54,7 @@ export function VisionSection() {
       {/* ===================================== */}
 
       <motion.div
-        style={{ y: bgY }}
+        style={{ y: isMobile ? 0 : bgY }}
         className="absolute -top-32 -bottom-32 inset-x-0 z-0"
       >
         {/* IMAGE */}
@@ -98,7 +104,7 @@ export function VisionSection() {
         <motion.h2
           initial={{
             opacity: 0,
-            y: 40,
+            y: isMobile ? 12 : 40,
           }}
           animate={
             isInView
@@ -109,7 +115,7 @@ export function VisionSection() {
               : {}
           }
           transition={{
-            duration: 0.8,
+            duration: isMobile ? 0.4 : 0.8,
           }}
           className="
             font-display
@@ -142,8 +148,8 @@ export function VisionSection() {
               : {}
           }
           transition={{
-            delay: 0.3,
-            duration: 0.8,
+            delay: isMobile ? 0.1 : 0.3,
+            duration: isMobile ? 0.4 : 0.8,
           }}
           className="
             h-px
@@ -162,7 +168,7 @@ export function VisionSection() {
           <motion.p
             initial={{
               opacity: 0,
-              y: 30,
+              y: isMobile ? 10 : 30,
             }}
             animate={
               isInView
@@ -173,7 +179,8 @@ export function VisionSection() {
                 : {}
             }
             transition={{
-              delay: 0.2,
+              delay: isMobile ? 0.1 : 0.2,
+              duration: isMobile ? 0.3 : 0.5,
             }}
             className="
               text-lg
@@ -197,7 +204,7 @@ export function VisionSection() {
           <motion.p
             initial={{
               opacity: 0,
-              y: 30,
+              y: isMobile ? 10 : 30,
             }}
             animate={
               isInView
@@ -208,7 +215,8 @@ export function VisionSection() {
                 : {}
             }
             transition={{
-              delay: 0.5,
+              delay: isMobile ? 0.15 : 0.5,
+              duration: isMobile ? 0.3 : 0.5,
             }}
             className="
               text-lg
@@ -254,8 +262,8 @@ export function VisionSection() {
                 : {}
             }
             transition={{
-              delay: 0.8,
-              duration: 0.8,
+              delay: isMobile ? 0.2 : 0.8,
+              duration: isMobile ? 0.4 : 0.8,
             }}
             className="
               h-px

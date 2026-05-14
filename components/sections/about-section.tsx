@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 
 import { useTranslations } from "next-intl";
@@ -11,6 +11,12 @@ export function AboutSection() {
   const t = useTranslations("about");
 
   const ref = useRef(null);
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
 
   const isInView = useInView(ref, {
     once: true,
@@ -50,7 +56,7 @@ export function AboutSection() {
           <motion.div
             initial={{
               opacity: 0,
-              x: -60,
+              x: isMobile ? -20 : -60,
             }}
             animate={
               isInView
@@ -61,12 +67,13 @@ export function AboutSection() {
                 : {}
             }
             transition={{
-              duration: 0.8,
+              duration: isMobile ? 0.4 : 0.8,
             }}
           >
             {/* TITLE */}
             <AnimatedText
               text={t("title")}
+              reducedMotion={isMobile}
               className="
                 font-display
                 text-5xl
@@ -83,7 +90,7 @@ export function AboutSection() {
             <motion.p
               initial={{
                 opacity: 0,
-                y: 20,
+                y: isMobile ? 8 : 20,
               }}
               animate={
                 isInView
@@ -94,8 +101,8 @@ export function AboutSection() {
                   : {}
               }
               transition={{
-                duration: 0.8,
-                delay: 0.25,
+                duration: isMobile ? 0.3 : 0.8,
+                delay: isMobile ? 0.1 : 0.25,
               }}
               className="
                 text-lg
@@ -121,8 +128,8 @@ export function AboutSection() {
                   : {}
               }
               transition={{
-                delay: 0.4,
-                duration: 0.8,
+                delay: isMobile ? 0.15 : 0.4,
+                duration: isMobile ? 0.4 : 0.8,
               }}
               className="
                 h-px
@@ -141,7 +148,7 @@ export function AboutSection() {
           <motion.div
             initial={{
               opacity: 0,
-              scale: 0.92,
+              scale: isMobile ? 0.97 : 0.92,
             }}
             animate={
               isInView
@@ -152,8 +159,8 @@ export function AboutSection() {
                 : {}
             }
             transition={{
-              duration: 1,
-              delay: 0.2,
+              duration: isMobile ? 0.4 : 1,
+              delay: isMobile ? 0.1 : 0.2,
             }}
             className="relative"
           >
@@ -165,7 +172,7 @@ export function AboutSection() {
               <motion.div
                 initial={{
                   opacity: 0,
-                  y: 40,
+                  y: isMobile ? 10 : 40,
                 }}
                 animate={
                   isInView
@@ -176,12 +183,12 @@ export function AboutSection() {
                     : {}
                 }
                 transition={{
-                  duration: 0.9,
-                  delay: 0.2,
+                  duration: isMobile ? 0.4 : 0.9,
+                  delay: isMobile ? 0.1 : 0.2,
                 }}
-                whileHover={{
-                  scale: 1.02,
-                }}
+                whileHover={
+                  isMobile ? {} : { scale: 1.02 }
+                }
                 className="
                   relative
                   rounded-[2.5rem]
@@ -192,7 +199,7 @@ export function AboutSection() {
                 "
               >
                 <img
-                  src="/about.jpeg"
+                  src="/aboutn.png"
                   alt="About"
                   className="
                     w-full
@@ -229,9 +236,9 @@ export function AboutSection() {
                 blur-3xl
                 rounded-full
               "
-              animate={{
-                scale: [1, 1.2, 1],
-              }}
+              animate={
+                isMobile ? {} : { scale: [1, 1.2, 1] }
+              }
               transition={{
                 duration: 5,
                 repeat: Infinity,
@@ -249,9 +256,9 @@ export function AboutSection() {
                 blur-3xl
                 rounded-full
               "
-              animate={{
-                scale: [1, 1.25, 1],
-              }}
+              animate={
+                isMobile ? {} : { scale: [1, 1.25, 1] }
+              }
               transition={{
                 duration: 6,
                 repeat: Infinity,

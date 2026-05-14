@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import {
   motion,
   useInView,
@@ -96,6 +96,12 @@ export function TeamSection() {
 
   const ref = useRef(null);
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
+
   const isInView = useInView(ref, {
     once: true,
     margin: "-80px",
@@ -130,7 +136,7 @@ export function TeamSection() {
           <motion.div
             initial={{
               opacity: 0,
-              y: 30,
+              y: isMobile ? 10 : 30,
             }}
             animate={
               isInView
@@ -140,6 +146,9 @@ export function TeamSection() {
                   }
                 : {}
             }
+            transition={{
+              duration: isMobile ? 0.3 : 0.5,
+            }}
           >
             {/* TITLE */}
             <h2
@@ -179,7 +188,7 @@ export function TeamSection() {
               key={member.name}
               initial={{
                 opacity: 0,
-                y: 50,
+                y: isMobile ? 15 : 50,
               }}
               animate={
                 isInView
@@ -190,12 +199,12 @@ export function TeamSection() {
                   : {}
               }
               transition={{
-                delay: i * 0.1,
-                duration: 0.6,
+                delay: isMobile ? Math.min(i * 0.05, 0.15) : i * 0.1,
+                duration: isMobile ? 0.3 : 0.6,
               }}
-              whileHover={{
-                y: -10,
-              }}
+              whileHover={
+                isMobile ? {} : { y: -10 }
+              }
               className="group relative w-full md:w-[280px]"
             >
               {/* CARD GLOW */}

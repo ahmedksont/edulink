@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
@@ -41,6 +42,12 @@ const features = [
 export function ProgramsSection() {
   const t = useTranslations("features");
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
+
   return (
     <section className="relative py-28 px-6 md:px-12 lg:px-24 overflow-hidden">
       {/* Background */}
@@ -60,14 +67,15 @@ export function ProgramsSection() {
               key={item.key}
               initial={{
                 opacity: 0,
-                y: 30,
+                y: isMobile ? 10 : 30,
               }}
               whileInView={{
                 opacity: 1,
                 y: 0,
               }}
               transition={{
-                delay: i * 0.1,
+                delay: isMobile ? Math.min(i * 0.05, 0.15) : i * 0.1,
+                duration: isMobile ? 0.3 : 0.5,
               }}
               viewport={{ once: true }}
               className="flex flex-col items-center"

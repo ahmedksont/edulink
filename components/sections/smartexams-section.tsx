@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
@@ -12,6 +13,12 @@ import {
 
 export function SmartExamSection() {
   const t = useTranslations("smartExam");
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
 
   return (
     <section
@@ -41,9 +48,9 @@ export function SmartExamSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* TEXT CONTENT */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: isMobile ? 12 : 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: isMobile ? 0.3 : 0.8 }}
             viewport={{ once: true }}
             className="order-1 lg:order-2"
           >
@@ -169,10 +176,10 @@ export function SmartExamSection() {
 
             {/* ACHIEVEMENT CARD */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: isMobile ? 10 : 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              whileHover={{ scale: 1.015 }}
+              transition={{ duration: isMobile ? 0.3 : 0.8 }}
+              whileHover={isMobile ? {} : { scale: 1.015 }}
               className="
                 relative
                 flex
@@ -197,7 +204,7 @@ export function SmartExamSection() {
 
               {/* IEEE Badge */}
               <motion.div
-                animate={{ y: [0, -6, 0] }}
+                animate={isMobile ? {} : { y: [0, -6, 0] }}
                 transition={{
                   repeat: Infinity,
                   duration: 4,
@@ -262,7 +269,7 @@ export function SmartExamSection() {
 
                 {/* SDG 4 */}
                 <motion.div
-                  animate={{ y: [0, -4, 0] }}
+                  animate={isMobile ? {} : { y: [0, -4, 0] }}
                   transition={{
                     repeat: Infinity,
                     duration: 3,
@@ -299,9 +306,9 @@ export function SmartExamSection() {
 
           {/* IMAGE */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: isMobile ? 0.98 : 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: isMobile ? 0.3 : 0.8 }}
             viewport={{ once: true }}
             className="relative order-2 lg:order-1"
           >

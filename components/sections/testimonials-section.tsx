@@ -1,12 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Star, Quote } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export default function TestimonialsSection() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
   const t = useTranslations("testimonials");
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
 
   const testimonials = [
     {
@@ -72,18 +77,20 @@ export default function TestimonialsSection() {
                   relative
                   transition-all
                   duration-500
-                  ${testimonial.rotation}
+                  ${isMobile ? "" : testimonial.rotation}
 
                   ${
-                    hoveredCard === index
+                    isMobile
+                      ? "scale-100 opacity-100"
+                      : hoveredCard === index
                       ? "scale-110 z-20 rotate-0"
                       : isCenter
                       ? "scale-100 opacity-100 z-10"
                       : "scale-95 opacity-70 z-0"
                   }
                 `}
-                onMouseEnter={() => setHoveredCard(index)}
-                onMouseLeave={() => setHoveredCard(null)}
+                onMouseEnter={() => !isMobile && setHoveredCard(index)}
+                onMouseLeave={() => !isMobile && setHoveredCard(null)}
               >
                 <div
                   className={`

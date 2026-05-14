@@ -9,6 +9,7 @@ interface AnimatedTextProps {
   once?: boolean;
   delay?: number;
   style?: React.CSSProperties;
+  reducedMotion?: boolean;
 }
 
 export function AnimatedText({
@@ -17,11 +18,32 @@ export function AnimatedText({
   once = true,
   delay = 0,
   style,
+  reducedMotion = false,
 }: AnimatedTextProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once, margin: "-100px" });
 
   const words = text.split(" ");
+
+  // Reduced motion: simple fade-in without per-word stagger
+  if (reducedMotion) {
+    return (
+      <motion.h1
+        ref={ref}
+        className={className}
+        style={style}
+        initial={{ opacity: 0, y: 10 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+        transition={{
+          duration: 0.4,
+          delay,
+          ease: "easeOut",
+        }}
+      >
+        {text}
+      </motion.h1>
+    );
+  }
 
   return (
     <motion.h1

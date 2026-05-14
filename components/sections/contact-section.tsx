@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 import {
   motion,
@@ -21,6 +21,12 @@ export function ContactSection() {
   const locale = useLocale();
 
   const ref = useRef(null);
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
 
   const isInView = useInView(
     ref,
@@ -110,23 +116,13 @@ export function ContactSection() {
       className="relative py-24 px-6 md:px-12 lg:px-24 overflow-hidden"
     >
       {/* Background */}
-      <div className="absolute inset-0 z-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url('/uni3.jpg')",
-          }}
-        />
-
-        <div className="absolute inset-0 bg-black/70" />
-      </div>
+      <div className="absolute inset-0 z-0 bg-gray-900" />
 
       <div className="relative max-w-6xl mx-auto z-10">
         <motion.div
           initial={{
             opacity: 0,
-            y: 40,
+            y: isMobile ? 12 : 40,
           }}
           animate={
             isInView
@@ -137,7 +133,7 @@ export function ContactSection() {
               : {}
           }
           transition={{
-            duration: 0.8,
+            duration: isMobile ? 0.3 : 0.8,
           }}
           className="relative rounded-3xl overflow-hidden p-10 md:p-14 backdrop-blur-xl bg-white/10 border border-white/20 text-white shadow-2xl"
         >
