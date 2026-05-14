@@ -70,27 +70,27 @@
     "title": "Menschen hinter dem Collider",
     "description": "Ein multidisziplinäres Team aus Pädagogik, Forschung, Technologie und Innovation, das die Zukunft des EdTech gestaltet.",
     "sonia": {
-      "role": "Expertin für pädagogisches Ingenieurwesen",
+      "role": "CEO und Präsidentin des Verwaltungsrats",
       "company": "ISET Sousse, Tunesien",
       "bio": "Informatikdozentin und Expertin für pädagogisches Ingenieurwesen. Sonia Sahli ist die Gründerin von SonyPlanner. Ihre Expertise im UI/UX-Design und ihre Zusammenarbeit mit mehreren europäischen Universitäten spiegeln ihr Engagement für Bildungsinnovation wider."
     },
     "denis": {
-      "role": "Präsident von Graasp.org",
+      "role": "Vizepräsident Finanzen",
       "company": "EPFL, Schweiz",
       "bio": "Universitätsprofessor und Präsident von Graasp.org. Denis Gillet leitet die Gruppe für Interaktionssysteme an der EPFL. Er ist Mitglied des IEEE-Bildungskomitees und Mitbegründer des Swiss  EdTech Development Network."
     },
     "thierry": {
-      "role": "Senior Lecturer",
+      "role": "Vizepräsident Bildung",
       "company": "Universität Avignon, Frankreich",
       "bio": "Experte für Hochschulpädagogik und digitale Innovation mit fast dreißig Jahren Erfahrung. Thierry Spriet engagiert sich aktiv für die digitale Transformation der Hochschulbildung."
     },
     "ahmed": {
-      "role": "Master-Student",
+      "role": "Team Dev",
       "company": "ISET Sousse, Tunesien",
       "bio": "Full-Stack-Entwickler spezialisiert auf KI, Cybersicherheit und skalierbare Websysteme. Organisator bei GDG Sousse."
     },
     "maram": {
-      "role": "Master-Studentin",
+      "role": "Team Com",
       "company": "Universität Sousse, Tunesien",
       "bio": "Leidenschaftlich für Entwicklung und digitale Technologien engagiert sich Maram für moderne und leistungsstarke digitale Erlebnisse."
     }

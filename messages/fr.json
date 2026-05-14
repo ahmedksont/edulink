@@ -73,31 +73,31 @@
     "description": "Des experts passionnés qui construisent l'avenir de l'éducation",
 
      "sonia": {
-  "role": "Experte en ingénierie pédagogique",
+  "role": "PDG et Présidente du Conseil d'Administration",
   "company": "ISET Sousse, Tunisie",
   "bio": "Enseignante universitaire en informatique et experte en ingénierie pédagogique, Sonia Sahli est créatrice de SonyPlanner. Son expertise en UI/UX Design et sa collaboration avec diverses universités européennes témoignent de son engagement dans l'innovation pédagogique."
 },
 
 "denis": {
-  "role": "Président de Graasp.org",
+  "role": "Vice President Finance",
   "company": "EPFL, Suisse",
   "bio": "Enseignant universitaire et président de Graasp.org, Denis Gillet dirige le groupe des systèmes d'interaction à l'EPFL. Il est membre du comité pour l'éducation de l'IEEE et cofondateur du Swiss  EdTech Development Network."
 },
 
 "thierry": {
-  "role": "Maître de conférences — Chargé de mission « pédagogie innovante »",
+  "role": "Vice President Education",
   "company": "Avignon Université, France",
   "bio": "Expert en pédagogie universitaire et innovation numérique avec près de trente ans d'expérience. Thierry Spriet participe activement à la transformation numérique de l'enseignement supérieur."
 },
 
 "ahmed": {
-  "role": "Étudiant en master",
+  "role": "Équipe Dev",
   "company": "ISET Sousse, Tunisie",
   "bio": "Développeur full-stack spécialisé en IA, cybersécurité et systèmes web scalables. Organisateur chez GDG Sousse."
 },
 
 "maram": {
-  "role": "Étudiante en master",
+  "role": "Équipe Com",
   "company": "Université de Sousse, Tunisie",
   "bio": "Passionnée par le développement et les technologies numériques, Maram contribue à la création d’expériences digitales modernes et performantes."
 }

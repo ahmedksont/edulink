@@ -79,15 +79,10 @@ export function SmartExamSection() {
 
             {/* TITLE */}
             <h2
-              className="
-                font-display
-                text-5xl
-                md:text-7xl
-                font-semibold
-                tracking-[-0.06em]
-                leading-[0.95]
-                text-black
-                mb-8
+             className="
+                mb-6
+                text-6xl
+                font-bold
               "
             >
               Smart{" "}

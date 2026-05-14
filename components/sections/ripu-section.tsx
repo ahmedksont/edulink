@@ -46,9 +46,9 @@ export function RipuSection() {
       className="
         relative
         overflow-hidden
-        py-24
+        py-18
         md:py-32
-        px-6
+        px-2
         md:px-12
         lg:px-24
       "
@@ -109,14 +109,9 @@ export function RipuSection() {
           >
             <h2
               className="
-                mb-8
-                font-display
-                text-4xl
-                md:text-6xl
-                font-black
-                tracking-[-0.05em]
-                leading-[0.95]
-                text-black
+                mb-6
+                text-5xl
+                font-bold
               "
             >
               {t("title")} —{" "}
@@ -258,7 +253,7 @@ export function RipuSection() {
         </div>
 
         {/* GALLERY */}
-        <div className="mt-28 md:mt-36">
+        <div className="mt-10 md:mt-36">
           {/* HEADER */}
           <motion.div
             variants={fadeUp}
@@ -271,32 +266,26 @@ export function RipuSection() {
                   ? 0
                   : 0.5,
             }}
-            className="mb-14 text-center"
+            className="mb-10 text-center"
           >
-            <h3
+          
+
+              <h3
               className="
-                font-display
-                text-4xl
-                md:text-6xl
-                font-black
-                tracking-[-0.04em]
-                leading-[0.95]
-                text-black
+                mb-1
+                text-5xl
+                font-bold
               "
             >
-              {t("galleryTitle")}{" "}
-              <span
-                className="
-                  bg-gradient-to-r
-                  from-violet-500
-                  to-fuchsia-500
-                  bg-clip-text
-                  text-transparent
-                "
-              >
-                {t("galleryHighlight")}
+              <span> {t("galleryTitle")}{" "}</span>
+
+              <span className="text-violet-500">
+               {t("galleryHighlight")}
               </span>
             </h3>
+             
+            
+     
 
             <p
               className="
