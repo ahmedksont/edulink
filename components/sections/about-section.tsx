@@ -61,9 +61,9 @@ export function AboutSection() {
             animate={
               isInView
                 ? {
-                    opacity: 1,
-                    x: 0,
-                  }
+                  opacity: 1,
+                  x: 0,
+                }
                 : {}
             }
             transition={{
@@ -95,9 +95,9 @@ export function AboutSection() {
               animate={
                 isInView
                   ? {
-                      opacity: 1,
-                      y: 0,
-                    }
+                    opacity: 1,
+                    y: 0,
+                  }
                   : {}
               }
               transition={{
@@ -123,8 +123,8 @@ export function AboutSection() {
               animate={
                 isInView
                   ? {
-                      width: 120,
-                    }
+                    width: 120,
+                  }
                   : {}
               }
               transition={{
@@ -153,9 +153,9 @@ export function AboutSection() {
             animate={
               isInView
                 ? {
-                    opacity: 1,
-                    scale: 1,
-                  }
+                  opacity: 1,
+                  scale: 1,
+                }
                 : {}
             }
             transition={{
@@ -177,9 +177,9 @@ export function AboutSection() {
                 animate={
                   isInView
                     ? {
-                        opacity: 1,
-                        y: 0,
-                      }
+                      opacity: 1,
+                      y: 0,
+                    }
                     : {}
                 }
                 transition={{
@@ -199,7 +199,7 @@ export function AboutSection() {
                 "
               >
                 <img
-                  src="/aboutn.png"
+                  src="/abouts.jpeg"
                   alt="About"
                   className="
                     w-full
