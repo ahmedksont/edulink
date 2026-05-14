@@ -1,79 +1,123 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
-import { motion, useInView } from "framer-motion";
+import Image from "next/image";
+import { useRef } from "react";
+
+import {
+  motion,
+  useInView,
+  useReducedMotion,
+} from "framer-motion";
 
 import { useTranslations } from "next-intl";
-
-import { AnimatedText } from "@/components/ui/animated-text";
 
 export function AboutSection() {
   const t = useTranslations("about");
 
   const ref = useRef(null);
 
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    setIsMobile(window.innerWidth < 768);
-  }, []);
-
   const isInView = useInView(ref, {
     once: true,
     margin: "-100px",
   });
+
+  // Respecte les préférences système
+  const prefersReducedMotion = useReducedMotion();
+
+  // Animations plus légères
+  const fadeUp = {
+    hidden: {
+      opacity: 0,
+      y: 24,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
 
   return (
     <section
       ref={ref}
       className="
         relative
-        py-32
-        md:py-40
+        overflow-hidden
+        bg-white
+        py-24
+        md:py-36
         px-6
         md:px-12
         lg:px-24
-        overflow-hidden
-        bg-white
       "
     >
       {/* TOP SEPARATOR */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl h-px bg-gradient-to-r from-transparent via-violet-300/40 to-transparent" />
+      <div
+        className="
+          absolute
+          top-0
+          left-1/2
+          -translate-x-1/2
+          h-px
+          w-[90%]
+          max-w-6xl
+          bg-gradient-to-r
+          from-transparent
+          via-violet-300/40
+          to-transparent
+        "
+      />
 
-      {/* BACKGROUND GLOWS */}
+      {/* LIGHT BACKGROUND GLOWS */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/3 w-[700px] h-[700px] bg-violet-100/40 blur-[140px] rounded-full" />
+        <div
+          className="
+            absolute
+            top-0
+            left-1/3
+            w-[500px]
+            h-[500px]
+            rounded-full
+            bg-violet-100/30
+            blur-2xl
+          "
+        />
 
-        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-fuchsia-100/30 blur-[120px] rounded-full" />
+        <div
+          className="
+            absolute
+            bottom-0
+            right-1/4
+            w-[300px]
+            h-[300px]
+            rounded-full
+            bg-fuchsia-100/20
+            blur-2xl
+          "
+        />
       </div>
 
       <div className="relative max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-          {/* ========================================= */}
+        <div
+          className="
+            grid
+            grid-cols-1
+            lg:grid-cols-2
+            gap-16
+            lg:gap-24
+            items-center
+          "
+        >
           {/* LEFT CONTENT */}
-          {/* ========================================= */}
-
           <motion.div
-            initial={{
-              opacity: 0,
-              x: isMobile ? -20 : -60,
-            }}
-            animate={
-              isInView
-                ? {
-                  opacity: 1,
-                  x: 0,
-                }
-                : {}
-            }
+            variants={fadeUp}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
             transition={{
-              duration: isMobile ? 0.4 : 0.8,
+              duration: prefersReducedMotion ? 0 : 0.6,
             }}
           >
             {/* TITLE */}
-            <AnimatedText
-              text={t("title")}
-              reducedMotion={isMobile}
+            <h2
               className="
                 font-display
                 text-5xl
@@ -84,186 +128,160 @@ export function AboutSection() {
                 mb-8
                 text-black
               "
-            />
+            >
+              {t("title")}
+            </h2>
 
             {/* DESCRIPTION */}
             <motion.p
-              initial={{
-                opacity: 0,
-                y: isMobile ? 8 : 20,
-              }}
-              animate={
-                isInView
-                  ? {
-                    opacity: 1,
-                    y: 0,
-                  }
-                  : {}
-              }
+              variants={fadeUp}
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
               transition={{
-                duration: isMobile ? 0.3 : 0.8,
-                delay: isMobile ? 0.1 : 0.25,
+                duration: prefersReducedMotion ? 0 : 0.6,
+                delay: prefersReducedMotion ? 0 : 0.1,
               }}
               className="
+                max-w-2xl
                 text-lg
                 md:text-xl
-                text-black/60
                 leading-relaxed
-                max-w-2xl
+                text-black/60
               "
             >
               {t("description")}
             </motion.p>
 
-            {/* PREMIUM UNDERLINE */}
-            <motion.div
-              initial={{
-                width: 0,
-              }}
-              animate={
-                isInView
-                  ? {
-                    width: 120,
-                  }
-                  : {}
-              }
-              transition={{
-                delay: isMobile ? 0.15 : 0.4,
-                duration: isMobile ? 0.4 : 0.8,
-              }}
+            {/* UNDERLINE */}
+            <div
               className="
+                mt-10
                 h-px
+                w-[120px]
                 bg-gradient-to-r
                 from-violet-500
                 to-transparent
-                mt-10
               "
             />
           </motion.div>
 
-          {/* ========================================= */}
           {/* RIGHT VISUAL */}
-          {/* ========================================= */}
-
           <motion.div
-            initial={{
-              opacity: 0,
-              scale: isMobile ? 0.97 : 0.92,
-            }}
-            animate={
-              isInView
-                ? {
-                  opacity: 1,
-                  scale: 1,
-                }
-                : {}
-            }
+            variants={fadeUp}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
             transition={{
-              duration: isMobile ? 0.4 : 1,
-              delay: isMobile ? 0.1 : 0.2,
+              duration: prefersReducedMotion ? 0 : 0.7,
+              delay: prefersReducedMotion ? 0 : 0.15,
             }}
             className="relative"
           >
-            {/* GLOW */}
-            <div className="absolute inset-0 bg-gradient-to-br from-violet-200/20 to-fuchsia-200/20 blur-3xl rounded-[3rem]" />
+            {/* SOFT GLOW */}
+            <div
+              className="
+                absolute
+                inset-0
+                rounded-[3rem]
+                bg-gradient-to-br
+                from-violet-200/10
+                to-fuchsia-200/10
+                blur-2xl
+              "
+            />
 
-            {/* SINGLE IMAGE */}
-            <div className="relative">
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  y: isMobile ? 10 : 40,
-                }}
-                animate={
-                  isInView
-                    ? {
-                      opacity: 1,
-                      y: 0,
-                    }
-                    : {}
-                }
-                transition={{
-                  duration: isMobile ? 0.4 : 0.9,
-                  delay: isMobile ? 0.1 : 0.2,
-                }}
-                whileHover={
-                  isMobile ? {} : { scale: 1.02 }
-                }
-                className="
-                  relative
-                  rounded-[2.5rem]
-                  overflow-hidden
-                  border border-black/[0.06]
-                  shadow-[0_30px_80px_rgba(0,0,0,0.12)]
-                  bg-white
+            {/* IMAGE CARD */}
+            <div
+              className="
+                relative
+                overflow-hidden
+                rounded-[2.5rem]
+                border
+                border-black/[0.06]
+                bg-white
+                shadow-[0_20px_60px_rgba(0,0,0,0.10)]
+              "
+            >
+              <Image
+                src="/abouts.jpeg"
+                alt="About"
+                width={1200}
+                height={1400}
+                sizes="
+                  (max-width: 768px) 100vw,
+                  (max-width: 1200px) 50vw,
+                  40vw
                 "
-              >
-                <img
-                  src="/abouts.jpeg"
-                  alt="About"
-                  className="
-                    w-full
-                    h-full
-                    object-cover
-                    transition-transform
-                    duration-700
-                    hover:scale-105
-                  "
-                />
+                className="
+                  h-auto
+                  w-full
+                  object-cover
+                "
+                priority={false}
+              />
 
-                {/* OVERLAY */}
-                <div
-                  className="
-                    absolute inset-0
-                    bg-gradient-to-t
-                    from-black/30
-                    via-transparent
-                    to-transparent
-                  "
-                />
-              </motion.div>
+              {/* OVERLAY */}
+              <div
+                className="
+                  absolute
+                  inset-0
+                  bg-gradient-to-t
+                  from-black/20
+                  via-transparent
+                  to-transparent
+                "
+              />
             </div>
 
-            {/* FLOATING ORBS */}
-            <motion.div
-              className="
-                absolute
-                -top-12
-                -right-12
-                w-32
-                h-32
-                bg-violet-500/20
-                blur-3xl
-                rounded-full
-              "
-              animate={
-                isMobile ? {} : { scale: [1, 1.2, 1] }
-              }
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-              }}
-            />
+            {/* FLOATING ORBS - desktop only */}
+            {!prefersReducedMotion && (
+              <>
+                <motion.div
+                  className="
+                    absolute
+                    -top-10
+                    -right-10
+                    w-24
+                    h-24
+                    rounded-full
+                    bg-violet-500/10
+                    blur-2xl
+                    hidden
+                    md:block
+                  "
+                  animate={{
+                    scale: [1, 1.15, 1],
+                  }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                />
 
-            <motion.div
-              className="
-                absolute
-                -bottom-12
-                -left-12
-                w-28
-                h-28
-                bg-fuchsia-500/20
-                blur-3xl
-                rounded-full
-              "
-              animate={
-                isMobile ? {} : { scale: [1, 1.25, 1] }
-              }
-              transition={{
-                duration: 6,
-                repeat: Infinity,
-              }}
-            />
+                <motion.div
+                  className="
+                    absolute
+                    -bottom-10
+                    -left-10
+                    w-20
+                    h-20
+                    rounded-full
+                    bg-fuchsia-500/10
+                    blur-2xl
+                    hidden
+                    md:block
+                  "
+                  animate={{
+                    scale: [1, 1.2, 1],
+                  }}
+                  transition={{
+                    duration: 6,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                />
+              </>
+            )}
           </motion.div>
         </div>
       </div>

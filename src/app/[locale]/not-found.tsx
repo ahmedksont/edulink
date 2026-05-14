@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 import {
@@ -57,6 +58,23 @@ export default function NotFound() {
                 Error 404
               </div>
             </div>
+
+            {/* Illustration */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.1, duration: 0.5 }}
+              className="flex justify-center mb-8"
+            >
+              <Image
+                src="/not-found.png"
+                alt="404 - Page not found"
+                width={320}
+                height={320}
+                className="w-56 h-56 md:w-72 md:h-72 object-contain"
+                priority
+              />
+            </motion.div>
 
             {/* 404 */}
             <motion.h1

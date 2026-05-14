@@ -10,7 +10,7 @@
   },
   "hero": {
     "title": "Edu Link",
-    "sub-title":"Tunisien  EdTech Development Network",
+    "sub-title": "Tunisien  EdTech Development Network",
     "subtitle": "Wo Bildung und Technologie zusammenkommen",
     "cta": "Entdecken"
   },
@@ -26,7 +26,6 @@
     "title": "Community",
     "description": "Werden Sie Teil eines Netzwerks aus engagierten Unternehmern, Pädagogen und Innovatoren."
   },
-  
   "contact": {
     "title": "Kontaktieren Sie uns",
     "description": "Senden Sie uns eine Nachricht, um Kooperationsmöglichkeiten im tunesischen EduLink-Ökosystem zu entdecken.",
@@ -35,160 +34,113 @@
     "email": "Ihre E-Mail",
     "message": "Ihre Nachricht...",
     "cta": "Nachricht senden"
-  }
-,
- "footer": {
+  },
+  "footer": {
     "tag": "Tunesischer EduLink Hub",
     "description": "Ein Ökosystem, in dem Bildung und Technologie zusammenkommen.",
-
     "navTitle": "Navigation",
     "quickTitle": "Schnellzugriff",
     "contactTitle": "Kontakt",
-
     "nav": {
       "about": "Über uns",
       "programs": "Programme",
       "community": "Community",
       "contact": "Kontakt"
     },
-
     "quick": {
       "events": "Events",
       "news": "Neuigkeiten",
       "partners": "Partner",
       "faq": "FAQ"
     },
-
     "address": "Sousse, Tunesien",
     "email": "contact@EduLink.tn",
     "phone": "+216 55 595 234",
     "placeholder": "Ihre E-Mail",
-
-   "rights": "Alle Rechte vorbehalten • Entwickelt von {name}"
+    "rights": "Alle Rechte vorbehalten • Entwickelt von <name></name>"
   },
   "vision": {
     "title": "Unsere Vision",
-"paragraph1": "Wir glauben, dass Tunesien das Potenzial hat, zu einem führenden Zentrum für intelligente Bildung und Bildungstechnologien in Afrika und international zu werden. Durch pädagogische Innovation, Forschung in den Lernwissenschaften, künstliche Intelligenz und digitale Transformation entsteht ein neues Bildungsökosystem, das Lehre, Ausbildung und die Unterstützung von Studierenden neu gestaltet.",
-
-"paragraph3": "EduLink-Startups, Bildungseinrichtungen und innovative Projektträger bei der Entwicklung digitaler Lösungen mit hoher Wirkung zu unterstützen. Durch Ausbildungsprogramme, Mentoring, Konferenzen, Webinare und unternehmerische Begleitung hilft der Collider dabei, Ideen in EdTech-Startups zu verwandeln, die Bildung und Ausbildung mithilfe intelligenter Technologien und künstlicher Intelligenz modernisieren.",
-
-"highlight": "Der tunesische Collider verfolgt das Ziel"
+    "paragraph1": "Wir glauben, dass Tunesien das Potenzial hat, zu einem führenden Zentrum für intelligente Bildung und Bildungstechnologien in Afrika und international zu werden. Durch pädagogische Innovation, Forschung in den Lernwissenschaften, künstliche Intelligenz und digitale Transformation entsteht ein neues Bildungsökosystem, das Lehre, Ausbildung und die Unterstützung von Studierenden neu gestaltet.",
+    "paragraph3": "EduLink-Startups, Bildungseinrichtungen und innovative Projektträger bei der Entwicklung digitaler Lösungen mit hoher Wirkung zu unterstützen. Durch Ausbildungsprogramme, Mentoring, Konferenzen, Webinare und unternehmerische Begleitung hilft der Collider dabei, Ideen in EdTech-Startups zu verwandeln, die Bildung und Ausbildung mithilfe intelligenter Technologien und künstlicher Intelligenz modernisieren.",
+    "highlight": "Der tunesische Collider verfolgt das Ziel"
   },
-  
-
-    "team": {
-  "label": "Unser Team",
-
-  "title": "Menschen hinter dem Collider",
-
-  "description": "Ein multidisziplinäres Team aus Pädagogik, Forschung, Technologie und Innovation, das die Zukunft des EdTech gestaltet.",
-
-  "sonia": {
-    "role": "Expertin für pädagogisches Ingenieurwesen",
-
-    "company": "ISET Sousse, Tunesien",
-
-    "bio": "Informatikdozentin und Expertin für pädagogisches Ingenieurwesen. Sonia Sahli ist die Gründerin von SonyPlanner. Ihre Expertise im UI/UX-Design und ihre Zusammenarbeit mit mehreren europäischen Universitäten spiegeln ihr Engagement für Bildungsinnovation wider."
+  "team": {
+    "label": "Unser Team",
+    "title": "Menschen hinter dem Collider",
+    "description": "Ein multidisziplinäres Team aus Pädagogik, Forschung, Technologie und Innovation, das die Zukunft des EdTech gestaltet.",
+    "sonia": {
+      "role": "Expertin für pädagogisches Ingenieurwesen",
+      "company": "ISET Sousse, Tunesien",
+      "bio": "Informatikdozentin und Expertin für pädagogisches Ingenieurwesen. Sonia Sahli ist die Gründerin von SonyPlanner. Ihre Expertise im UI/UX-Design und ihre Zusammenarbeit mit mehreren europäischen Universitäten spiegeln ihr Engagement für Bildungsinnovation wider."
+    },
+    "denis": {
+      "role": "Präsident von Graasp.org",
+      "company": "EPFL, Schweiz",
+      "bio": "Universitätsprofessor und Präsident von Graasp.org. Denis Gillet leitet die Gruppe für Interaktionssysteme an der EPFL. Er ist Mitglied des IEEE-Bildungskomitees und Mitbegründer des Swiss  EdTech Development Network."
+    },
+    "thierry": {
+      "role": "Senior Lecturer",
+      "company": "Universität Avignon, Frankreich",
+      "bio": "Experte für Hochschulpädagogik und digitale Innovation mit fast dreißig Jahren Erfahrung. Thierry Spriet engagiert sich aktiv für die digitale Transformation der Hochschulbildung."
+    },
+    "ahmed": {
+      "role": "Master-Student",
+      "company": "ISET Sousse, Tunesien",
+      "bio": "Full-Stack-Entwickler spezialisiert auf KI, Cybersicherheit und skalierbare Websysteme. Organisator bei GDG Sousse."
+    },
+    "maram": {
+      "role": "Master-Studentin",
+      "company": "Universität Sousse, Tunesien",
+      "bio": "Leidenschaftlich für Entwicklung und digitale Technologien engagiert sich Maram für moderne und leistungsstarke digitale Erlebnisse."
+    }
   },
-
-  "denis": {
-    "role": "Präsident von Graasp.org",
-
-    "company": "EPFL, Schweiz",
-
-    "bio": "Universitätsprofessor und Präsident von Graasp.org. Denis Gillet leitet die Gruppe für Interaktionssysteme an der EPFL. Er ist Mitglied des IEEE-Bildungskomitees und Mitbegründer des Swiss  EdTech Development Network."
+  "features": {
+    "coworking": "Ein Innovations- und Kollaborationsraum für EdTech-Startups, digitale Pädagogik und KI-Projekte im Bildungsbereich, der Kreativität, Experimentierung und die Entwicklung intelligenter Bildungslösungen fördert.",
+    "p2p": "Programme für kollaboratives Lernen, Mentoring und Wissensaustausch rund um Pädagogik, künstliche Intelligenz, digitale Transformation, Bildungswebinare und innovative Ansätze für intelligentes Lernen.",
+    "ecosystem": "Ein Ökosystem, das Bildungseinrichtungen, Forschende, Startups, Investoren, digitale Expertinnen und Experten sowie öffentliche Akteure zusammenbringt, um Bildungsinnovation und die Ziele von SDG 4 – Hochwertige Bildung zu fördern.",
+    "events": "Organisation von Konferenzen, Ausbildungsprogrammen, Webinaren, Workshops, Hackathons und Unterstützungsinitiativen, um innovative Ideen in wirkungsvolle EdTech-Startups zu verwandeln.",
+    "collisions": "Schaffung von Synergien zwischen Studierenden, Unternehmern, Forschenden und Organisationen, um die Integration intelligenter Technologien, künstlicher Intelligenz und digitaler Lösungen in Bildung und Ausbildung zu beschleunigen."
   },
-
-  "thierry": {
-    "role": "Senior Lecturer",
-
-    "company": "Universität Avignon, Frankreich",
-
-    "bio": "Experte für Hochschulpädagogik und digitale Innovation mit fast dreißig Jahren Erfahrung. Thierry Spriet engagiert sich aktiv für die digitale Transformation der Hochschulbildung."
-  },
-
-  "ahmed": {
-    "role": "Master-Student",
-
-    "company": "ISET Sousse, Tunesien",
-
-    "bio": "Full-Stack-Entwickler spezialisiert auf KI, Cybersicherheit und skalierbare Websysteme. Organisator bei GDG Sousse."
-  },
-
-  "maram": {
-    "role": "Master-Studentin",
-
-    "company": "Universität Sousse, Tunesien",
-
-    "bio": "Leidenschaftlich für Entwicklung und digitale Technologien engagiert sich Maram für moderne und leistungsstarke digitale Erlebnisse."
-  }
-}
-  ,
-  
-"features": {
-  "coworking": "Ein Innovations- und Kollaborationsraum für EdTech-Startups, digitale Pädagogik und KI-Projekte im Bildungsbereich, der Kreativität, Experimentierung und die Entwicklung intelligenter Bildungslösungen fördert.",
-
-  "p2p": "Programme für kollaboratives Lernen, Mentoring und Wissensaustausch rund um Pädagogik, künstliche Intelligenz, digitale Transformation, Bildungswebinare und innovative Ansätze für intelligentes Lernen.",
-
-  "ecosystem": "Ein Ökosystem, das Bildungseinrichtungen, Forschende, Startups, Investoren, digitale Expertinnen und Experten sowie öffentliche Akteure zusammenbringt, um Bildungsinnovation und die Ziele von SDG 4 – Hochwertige Bildung zu fördern.",
-
-  "events": "Organisation von Konferenzen, Ausbildungsprogrammen, Webinaren, Workshops, Hackathons und Unterstützungsinitiativen, um innovative Ideen in wirkungsvolle EdTech-Startups zu verwandeln.",
-
-  "collisions": "Schaffung von Synergien zwischen Studierenden, Unternehmern, Forschenden und Organisationen, um die Integration intelligenter Technologien, künstlicher Intelligenz und digitaler Lösungen in Bildung und Ausbildung zu beschleunigen."
-}
-,
-
   "testimonials": {
     "title": "Was unsere Mitglieder sagen",
     "subtitle": "Erfahrungen aus dem tunesischen EduLink-Ökosystem",
     "cta": "Eine Community, die täglich wächst",
-
-   "t1": {
-    "quote": "Meine Zusammenarbeit mit Sonia begann im Rahmen des IEEE Entrepreneurship-Programms beim Projekt Smart Exam. Sie ist eine starke Verbindung zwischen Wissenschaft und Unternehmertum, baut wertvolle internationale Kooperationen 🇮🇹🇨🇭🇹🇳🇪🇬 auf und verwandelt Ideen in echte Chancen.",
-    "role": "PE, PhD"
-  },
-
-  "t2": {
-    "quote": "Wir haben sehr gerne mit Edulink zusammengearbeitet. Es war eine großartige Erfahrung, tunesische Studierende als Praktikanten in unserem Startup willkommen zu heißen. Kompetente Entwickler, die unserem Team echten Mehrwert gebracht haben. Vielen Dank an Edulink für diese großartige Verbindung!",
-    "role": "CTO - The Schooly - Scorton"
-  },
-
-  "t3": {
-    "quote": "Edulink öffnet die Tür zu Investoren und neuen Möglichkeiten. Dank Edulink konnte ich mein Smart-Agriculture-Projekt in ein zukünftiges Startup verwandeln.",
-    "role": "Abschlussstudent, Abschlussprojekt"
-  }
+    "t1": {
+      "quote": "Meine Zusammenarbeit mit Sonia begann im Rahmen des IEEE Entrepreneurship-Programms beim Projekt Smart Exam. Sie ist eine starke Verbindung zwischen Wissenschaft und Unternehmertum, baut wertvolle internationale Kooperationen 🇮🇹🇨🇭🇹🇳🇪🇬 auf und verwandelt Ideen in echte Chancen.",
+      "role": "PE, PhD"
+    },
+    "t2": {
+      "quote": "Wir haben sehr gerne mit Edulink zusammengearbeitet. Es war eine großartige Erfahrung, tunesische Studierende als Praktikanten in unserem Startup willkommen zu heißen. Kompetente Entwickler, die unserem Team echten Mehrwert gebracht haben. Vielen Dank an Edulink für diese großartige Verbindung!",
+      "role": "CTO - The Schooly - Scorton"
+    },
+    "t3": {
+      "quote": "Edulink öffnet die Tür zu Investoren und neuen Möglichkeiten. Dank Edulink konnte ich mein Smart-Agriculture-Projekt in ein zukünftiges Startup verwandeln.",
+      "role": "Abschlussstudent, Abschlussprojekt"
+    }
   },
   "ripu": {
-  "label": "Leuchtturmprojekt",
-  "title": "RIPU 25",
-  "subtitle": "Die Zukunft der Bildung gestalten",
-  "description": "RIPU 25 ist eine internationale Initiative, die Lehrkräfte, Forschende und Innovatoren zusammenbringt, um die Hochschulbildung im Zeitalter von künstlicher Intelligenz und digitaler Transformation neu zu denken, die Zusammenarbeit zu fördern und die Zukunft des Lernens zu gestalten.",
-  "cta": "RIPU 25 entdecken",
-  "galleryLabel": "RIPU 25",
-"galleryTitle": "Rückblick auf",
-"galleryHighlight": "RIPU 25",
-"galleryDescription": "Highlights, Innovation, Austausch und Community während RIPU 2025. Eine neue Ausgabe von RIPU wird in Kürze angekündigt."
-},
-
+    "label": "Leuchtturmprojekt",
+    "title": "RIPU 25",
+    "subtitle": "Die Zukunft der Bildung gestalten",
+    "description": "RIPU 25 ist eine internationale Initiative, die Lehrkräfte, Forschende und Innovatoren zusammenbringt, um die Hochschulbildung im Zeitalter von künstlicher Intelligenz und digitaler Transformation neu zu denken, die Zusammenarbeit zu fördern und die Zukunft des Lernens zu gestalten.",
+    "cta": "RIPU 25 entdecken",
+    "galleryLabel": "RIPU 25",
+    "galleryTitle": "Rückblick auf",
+    "galleryHighlight": "RIPU 25",
+    "galleryDescription": "Highlights, Innovation, Austausch und Community während RIPU 2025. Eine neue Ausgabe von RIPU wird in Kürze angekündigt."
+  },
   "smartExam": {
     "label": "Errungenschaft",
     "description": "Eine intelligente Prüfungsplattform zur Verbesserung des Lernens durch KI-gestützte Analysen, adaptive Bewertungen und personalisierte Bildungserfahrungen.",
-
     "aiTitle": "KI-gestützte Analyse",
     "aiDescription": "Fortschrittliche künstliche Intelligenz analysiert Leistungen und liefert personalisierte Verbesserungsvorschläge.",
-
     "educationTitle": "Moderne Bildung",
     "educationDescription": "Entwickelt, um das Bildungserlebnis mit intelligenteren Bewertungen und adaptiven Lernsystemen zu transformieren.",
-
     "award": "IEEE Entrepreneurship Gewinner",
-
     "awardDescription": "Gewinner des IEEE Entrepreneurship Wettbewerbs für Innovationen im Bereich KI-gestützter Bildungstechnologien."
   },
   "loader": {
-  "text": "ERLEBNIS WIRD VORBEREITET"
+    "text": "ERLEBNIS WIRD VORBEREITET"
+  }
 }
-}
-
-
-
-

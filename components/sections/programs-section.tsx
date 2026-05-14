@@ -1,7 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import {
+  motion,
+  useReducedMotion,
+} from "framer-motion";
+
 import { useTranslations } from "next-intl";
 
 import {
@@ -42,52 +45,108 @@ const features = [
 export function ProgramsSection() {
   const t = useTranslations("features");
 
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    setIsMobile(window.innerWidth < 768);
-  }, []);
+  const prefersReducedMotion =
+    useReducedMotion();
 
   return (
-    <section className="relative py-28 px-6 md:px-12 lg:px-24 overflow-hidden">
+    <section
+      className="
+        relative
+        overflow-hidden
+        py-28
+        px-6
+        md:px-12
+        lg:px-24
+      "
+    >
       {/* Background */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="
+          absolute
+          inset-0
+          bg-cover
+          bg-center
+        "
         style={{
           backgroundImage: "url('/uni1.jpg')",
         }}
       />
 
-      <div className="absolute inset-0 bg-black/80 backdrop-blur-md" />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/90" />
 
-      <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 text-center">
+      {/* Content */}
+      <div
+        className="
+          relative
+          z-10
+          mx-auto
+          max-w-7xl
+        "
+      >
+        <div
+          className="
+            grid
+            grid-cols-1
+            gap-10
+            text-center
+            md:grid-cols-5
+          "
+        >
           {features.map((item, i) => (
             <motion.div
               key={item.key}
               initial={{
                 opacity: 0,
-                y: isMobile ? 10 : 30,
+                y: 24,
               }}
               whileInView={{
                 opacity: 1,
                 y: 0,
               }}
-              transition={{
-                delay: isMobile ? Math.min(i * 0.05, 0.15) : i * 0.1,
-                duration: isMobile ? 0.3 : 0.5,
-              }}
               viewport={{ once: true }}
-              className="flex flex-col items-center"
+              transition={{
+                duration:
+                  prefersReducedMotion
+                    ? 0
+                    : 0.45,
+                delay:
+                  prefersReducedMotion
+                    ? 0
+                    : i * 0.06,
+              }}
+              whileHover={
+                prefersReducedMotion
+                  ? {}
+                  : { y: -4 }
+              }
+              className="
+                flex
+                flex-col
+                items-center
+              "
             >
               {/* Icon */}
               <item.icon
-                className="w-14 h-14 text-white mb-6 opacity-90"
+                className="
+                  mb-6
+                  h-14
+                  w-14
+                  text-white
+                  opacity-90
+                "
                 strokeWidth={1.5}
               />
 
               {/* Text */}
-              <p className="text-white/90 text-sm leading-relaxed max-w-xs">
+              <p
+                className="
+                  max-w-xs
+                  text-sm
+                  leading-relaxed
+                  text-white/90
+                "
+              >
                 {t(item.key)}
               </p>
             </motion.div>

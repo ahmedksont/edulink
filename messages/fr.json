@@ -54,7 +54,7 @@
     "phone": "+216 55 595 234",
     "placeholder": "Votre email",
 
-    "rights": "Tous droits réservés • Développé par {name}"
+    "rights": "Tous droits réservés • Développé par <name></name>"
   }
 
   ,

@@ -1,7 +1,12 @@
 "use client";
 
-import { useTranslations, useLocale } from "next-intl";
+import {
+  useTranslations,
+  useLocale,
+} from "next-intl";
+
 import Link from "next/link";
+
 import {
   Linkedin,
   Twitter,
@@ -17,24 +22,60 @@ import { useState } from "react";
 
 export function Footer() {
   const t = useTranslations("footer");
+
   const locale = useLocale();
 
-  const [email, setEmail] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
+  const [email, setEmail] =
+    useState("");
+
+  const [loading, setLoading] =
+    useState(false);
+
+  const [success, setSuccess] =
+    useState(false);
 
   const navigationItems = [
-    { key: "about", href: "about" },
-    { key: "programs", href: "programs" },
-    { key: "community", href: "community" },
-    { key: "contact", href: "contact" },
+    {
+      key: "about",
+      href: "about",
+    },
+
+    {
+      key: "programs",
+      href: "programs",
+    },
+
+    {
+      key: "community",
+      href: "community",
+    },
+
+    {
+      key: "contact",
+      href: "contact",
+    },
   ];
 
   const quickLinks = [
-    { key: "events", href: "https://ripusousse.com" },
-    { key: "news", href: "/news" },
-    { key: "partners", href: "/partners" },
-    { key: "faq", href: "/faq" },
+    {
+      key: "events",
+      href: "https://ripusousse.com",
+    },
+
+    {
+      key: "news",
+      href: "/news",
+    },
+
+    {
+      key: "partners",
+      href: "/partners",
+    },
+
+    {
+      key: "faq",
+      href: "/faq",
+    },
   ];
 
   const handleSubscribe = async (
@@ -51,10 +92,12 @@ export function Footer() {
         "/api/newsletter",
         {
           method: "POST",
+
           headers: {
             "Content-Type":
               "application/json",
           },
+
           body: JSON.stringify({
             email,
             locale,
@@ -64,6 +107,7 @@ export function Footer() {
 
       if (res.ok) {
         setSuccess(true);
+
         setEmail("");
 
         setTimeout(() => {
@@ -78,59 +122,169 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative bg-gradient-to-b from-gray-50 to-white text-gray-900 overflow-hidden border-t border-gray-200">
-
-      {/* Background */}
+    <footer
+      className="
+        relative
+        overflow-hidden
+        border-t
+        border-gray-200
+        bg-gradient-to-b
+        from-gray-50
+        to-white
+        text-gray-900
+      "
+    >
+      {/* BACKGROUND */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-violet-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" />
+        <div
+          className="
+            absolute
+            top-0
+            left-0
+            h-96
+            w-96
+            rounded-full
+            bg-violet-500/5
+            blur-3xl
+          "
+        />
+
+        <div
+          className="
+            absolute
+            bottom-0
+            right-0
+            h-96
+            w-96
+            rounded-full
+            bg-purple-500/5
+            blur-3xl
+          "
+        />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 md:px-12 py-16 z-10">
-
+      <div
+        className="
+          relative
+          z-10
+          mx-auto
+          max-w-7xl
+          px-6
+          py-16
+          md:px-12
+        "
+      >
         {/* GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-
+        <div
+          className="
+            mb-12
+            grid
+            grid-cols-1
+            gap-12
+            md:grid-cols-2
+            lg:grid-cols-4
+          "
+        >
           {/* BRAND */}
           <div>
-            <h3 className="text-3xl font-bold mb-2">
+            <h3
+              className="
+                mb-2
+                text-3xl
+                font-bold
+              "
+            >
               <span>EduLink</span>
+
               <span className="text-violet-500">
                 Collider
               </span>
             </h3>
 
-            <div className="flex items-center gap-2 mt-2">
-              <Sparkles className="w-4 h-4 text-violet-500" />
+            <div
+              className="
+                mt-2
+                flex
+                items-center
+                gap-2
+              "
+            >
+              <Sparkles
+                className="
+                  h-4
+                  w-4
+                  text-violet-500
+                "
+              />
 
-              <span className="text-xs text-gray-500 uppercase tracking-wider">
+              <span
+                className="
+                  text-xs
+                  uppercase
+                  tracking-wider
+                  text-gray-500
+                "
+              >
                 {t("tag")}
               </span>
             </div>
 
-            <p className="text-gray-600 text-sm mt-4">
+            <p
+              className="
+                mt-4
+                text-sm
+                text-gray-600
+              "
+            >
               {t("description")}
             </p>
 
-            {/* Socials */}
-            <div className="flex gap-3 mt-4">
+            {/* SOCIALS */}
+            <div
+              className="
+                mt-4
+                flex
+                gap-3
+              "
+            >
               <a
                 href="#"
-                className="p-2 bg-gray-100 rounded-full hover:bg-violet-500 hover:text-white transition"
+                className="
+                  rounded-full
+                  bg-gray-100
+                  p-2
+                  transition
+                  hover:bg-violet-500
+                  hover:text-white
+                "
               >
                 <Linkedin size={16} />
               </a>
 
               <a
                 href="#"
-                className="p-2 bg-gray-100 rounded-full hover:bg-violet-500 hover:text-white transition"
+                className="
+                  rounded-full
+                  bg-gray-100
+                  p-2
+                  transition
+                  hover:bg-violet-500
+                  hover:text-white
+                "
               >
                 <Twitter size={16} />
               </a>
 
               <a
                 href="#"
-                className="p-2 bg-gray-100 rounded-full hover:bg-violet-500 hover:text-white transition"
+                className="
+                  rounded-full
+                  bg-gray-100
+                  p-2
+                  transition
+                  hover:bg-violet-500
+                  hover:text-white
+                "
               >
                 <Github size={16} />
               </a>
@@ -139,7 +293,12 @@ export function Footer() {
 
           {/* NAV */}
           <div>
-            <h4 className="font-semibold mb-4">
+            <h4
+              className="
+                mb-4
+                font-semibold
+              "
+            >
               {t("navTitle")}
             </h4>
 
@@ -148,8 +307,12 @@ export function Footer() {
                 (item) => (
                   <li key={item.key}>
                     <Link
-                     href={`/${locale}/#${item.href}`}
-                      className="text-gray-600 hover:text-violet-500 transition"
+                      href={`/${locale}/#${item.href}`}
+                      className="
+                        text-gray-600
+                        transition
+                        hover:text-violet-500
+                      "
                     >
                       {t(
                         `nav.${item.key}`
@@ -163,62 +326,111 @@ export function Footer() {
 
           {/* QUICK LINKS */}
           <div>
-            <h4 className="font-semibold mb-4">
+            <h4
+              className="
+                mb-4
+                font-semibold
+              "
+            >
               {t("quickTitle")}
             </h4>
 
             <ul className="space-y-2">
-              {quickLinks.map((link) => (
-                <li key={link.key}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-600 hover:text-violet-500 transition"
-                  >
-                    {t(
-                      `quick.${link.key}`
-                    )}
-                  </Link>
-                </li>
-              ))}
+              {quickLinks.map(
+                (link) => (
+                  <li key={link.key}>
+                    <Link
+                      href={link.href}
+                      className="
+                        text-gray-600
+                        transition
+                        hover:text-violet-500
+                      "
+                    >
+                      {t(
+                        `quick.${link.key}`
+                      )}
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </div>
 
           {/* CONTACT */}
           <div>
-            <h4 className="font-semibold mb-4">
+            <h4
+              className="
+                mb-4
+                font-semibold
+              "
+            >
               {t("contactTitle")}
             </h4>
 
-            <div className="space-y-2 text-sm text-gray-600">
-              <p className="flex items-center gap-2">
+            <div
+              className="
+                space-y-2
+                text-sm
+                text-gray-600
+              "
+            >
+              <p
+                className="
+                  flex
+                  items-center
+                  gap-2
+                "
+              >
                 <MapPin
                   size={14}
                   className="text-violet-500"
                 />
+
                 {t("address")}
               </p>
 
-              <p className="flex items-center gap-2">
+              <p
+                className="
+                  flex
+                  items-center
+                  gap-2
+                "
+              >
                 <Mail
                   size={14}
                   className="text-violet-500"
                 />
+
                 {t("email")}
               </p>
 
-              <p className="flex items-center gap-2">
+              <p
+                className="
+                  flex
+                  items-center
+                  gap-2
+                "
+              >
                 <Phone
                   size={14}
                   className="text-violet-500"
                 />
+
                 {t("phone")}
               </p>
             </div>
 
             {/* NEWSLETTER */}
             <form
-              onSubmit={handleSubscribe}
-              className="mt-4 flex gap-2"
+              onSubmit={
+                handleSubscribe
+              }
+              className="
+                mt-4
+                flex
+                gap-2
+              "
             >
               <input
                 type="email"
@@ -226,7 +438,17 @@ export function Footer() {
                 placeholder={t(
                   "placeholder"
                 )}
-                className="flex-1 px-3 py-2 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-violet-500"
+                className="
+                  flex-1
+                  rounded-lg
+                  border
+                  px-3
+                  py-2
+                  text-sm
+                  focus:outline-none
+                  focus:ring-2
+                  focus:ring-violet-500
+                "
                 value={email}
                 onChange={(e) =>
                   setEmail(
@@ -237,47 +459,100 @@ export function Footer() {
 
               <button
                 disabled={loading}
-                className="bg-violet-500 text-white px-3 rounded-lg hover:bg-violet-600 transition disabled:opacity-50"
+                className="
+                  rounded-lg
+                  bg-violet-500
+                  px-3
+                  text-white
+                  transition
+                  hover:bg-violet-600
+                  disabled:opacity-50
+                "
               >
                 <Send size={16} />
               </button>
             </form>
+
+            {success && (
+              <p
+                className="
+                  mt-2
+                  text-xs
+                  text-green-600
+                "
+              >
+                {t("success")}
+              </p>
+            )}
           </div>
         </div>
 
         {/* BOTTOM */}
-         <div className="border-t pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-          
-          {/* RIGHTS */}
+        <div
+          className="
+            flex
+            flex-col
+            items-center
+            justify-between
+            gap-4
+            border-t
+            pt-6
+            text-sm
+            text-gray-500
+            md:flex-row
+          "
+        >
           <p>
-            {t.rich("rights", {
-              name: () => (
-                <a
-                  href="https://ahmedksontini.dev/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-violet-500 hover:underline opacity-80 hover:opacity-100 transition"
-                >
-                  Ahmed Ksontini
-                </a>
-              ),
-            })}
-             <a
-                  href="https://ahmedksontini.dev/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-violet-500 hover:underline opacity-80 hover:opacity-100 transition"
-                >
-                  Ahmed Ksontini
-                </a>
-          </p>
-          
-
+  {t.rich("rights", {
+    name: () => (
+      <a
+        href="https://ahmedksontini.dev/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="
+          text-violet-500
+          opacity-80
+          transition
+          hover:underline
+          hover:opacity-100
+        "
+      >
+        Ahmed Ksontini
+      </a>
+    ),
+  })}
+</p>
           {/* LANG SWITCH */}
           <div className="flex gap-3">
-            <Link href="/en" className="hover:text-violet-500">EN</Link>
-            <Link href="/fr" className="hover:text-violet-500">FR</Link>
-            <Link href="/de" className="hover:text-violet-500">DE</Link>
+            <Link
+              href="/en"
+              className="
+                transition
+                hover:text-violet-500
+              "
+            >
+              EN
+            </Link>
+
+            <Link
+              href="/fr"
+              className="
+                transition
+                hover:text-violet-500
+              "
+            >
+              FR
+            </Link>
+
+            <Link
+              href="/de"
+              className="
+                transition
+                hover:text-violet-500
+              "
+            >
+              DE
+            </Link>
           </div>
         </div>
       </div>
