@@ -68,7 +68,7 @@ export function ProgramsSection() {
           bg-center
         "
         style={{
-          backgroundImage: "url('/uni1.jpg')",
+          backgroundImage: "url('/Uni1.jpg')",
         }}
       />
 
