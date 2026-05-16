@@ -7,6 +7,7 @@ import {
   motion,
   useInView,
   useReducedMotion,
+  Variants,
 } from "framer-motion";
 
 import { useTranslations } from "next-intl";
@@ -21,11 +22,9 @@ export function AboutSection() {
     margin: "-100px",
   });
 
-  // Respecte les préférences système
   const prefersReducedMotion = useReducedMotion();
 
-  // Animations plus légères
-  const fadeUp = {
+  const fadeUp: Variants = {
     hidden: {
       opacity: 0,
       y: 24,
@@ -33,6 +32,10 @@ export function AboutSection() {
     visible: {
       opacity: 1,
       y: 0,
+      transition: {
+        duration: prefersReducedMotion ? 0 : 0.7,
+        ease: "easeOut",
+      },
     },
   };
 
@@ -40,71 +43,33 @@ export function AboutSection() {
     <section
       ref={ref}
       className="
-        relative
-        overflow-hidden
-        bg-white
-        py-24
-        md:py-36
-        px-6
-        md:px-12
-        lg:px-24
+        relative overflow-hidden
+        bg-[#f5f5f4]
+        px-5 py-20
+        md:px-10 md:py-28
+        lg:px-24 lg:py-32
       "
     >
-      {/* TOP SEPARATOR */}
-      <div
-        className="
-          absolute
-          top-0
-          left-1/2
-          -translate-x-1/2
-          h-px
-          w-[90%]
-          max-w-6xl
-          bg-gradient-to-r
-          from-transparent
-          via-violet-300/40
-          to-transparent
-        "
-      />
-
-      {/* LIGHT BACKGROUND GLOWS */}
-      <div className="absolute inset-0 pointer-events-none">
+      {/* BACKGROUND GLOW */}
+      <div className="pointer-events-none absolute inset-0">
         <div
           className="
-            absolute
-            top-0
-            left-1/3
-            w-[500px]
-            h-[500px]
+            absolute left-1/2 top-0
+            h-[450px] w-[450px]
+            -translate-x-1/2
             rounded-full
             bg-violet-100/30
-            blur-2xl
-          "
-        />
-
-        <div
-          className="
-            absolute
-            bottom-0
-            right-1/4
-            w-[300px]
-            h-[300px]
-            rounded-full
-            bg-fuchsia-100/20
-            blur-2xl
+            blur-3xl
           "
         />
       </div>
 
-      <div className="relative max-w-7xl mx-auto">
+      <div className="relative mx-auto max-w-7xl">
         <div
           className="
-            grid
-            grid-cols-1
-            lg:grid-cols-2
-            gap-16
-            lg:gap-24
-            items-center
+            grid gap-14
+            lg:grid-cols-[0.95fr_1.05fr]
+            lg:items-center
           "
         >
           {/* LEFT CONTENT */}
@@ -112,57 +77,162 @@ export function AboutSection() {
             variants={fadeUp}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            transition={{
-              duration: prefersReducedMotion ? 0 : 0.6,
-            }}
           >
             {/* TITLE */}
             <h2
               className="
-                font-display
+                max-w-xl
                 text-5xl
-                md:text-7xl
-                font-semibold
-                tracking-[-0.05em]
+                font-black
                 leading-[0.92]
-                mb-8
+                tracking-[-0.06em]
                 text-black
+                md:text-6xl
               "
             >
               {t("title")}
             </h2>
 
             {/* DESCRIPTION */}
-            <motion.p
-              variants={fadeUp}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
-              transition={{
-                duration: prefersReducedMotion ? 0 : 0.6,
-                delay: prefersReducedMotion ? 0 : 0.1,
-              }}
+            <p
               className="
+                mt-7
                 max-w-2xl
-                text-lg
-                md:text-xl
-                leading-relaxed
+                text-base
+                leading-[1.9]
                 text-black/60
+                md:text-lg
               "
             >
               {t("description")}
-            </motion.p>
+            </p>
 
-            {/* UNDERLINE */}
-            <div
-              className="
-                mt-10
-                h-px
-                w-[120px]
-                bg-gradient-to-r
-                from-violet-500
-                to-transparent
-              "
-            />
+            {/* FEATURE CARDS */}
+            <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
+              {/* CARD 1 */}
+              <motion.div
+                whileHover={{
+                  y: -4,
+                }}
+                transition={{
+                  duration: 0.25,
+                }}
+                className="
+                  flex items-center gap-4
+                  rounded-3xl
+                  border border-black/[0.05]
+                  bg-white
+                  p-4 md:p-5
+                  shadow-[0_6px_24px_rgba(0,0,0,0.04)]
+                "
+              >
+                <div
+                  className="
+                    flex h-16 w-16 shrink-0
+                    items-center justify-center
+                    overflow-hidden
+                    rounded-2xl
+                    bg-violet-50
+                  "
+                >
+                  <Image
+                    src="/sdg4.png"
+                    alt="SDG 4"
+                    width={52}
+                    height={52}
+                    className="object-contain"
+                  />
+                </div>
+
+                <div className="min-w-0">
+                  <h3
+                    className="
+                      text-base
+                      font-semibold
+                      tracking-[-0.02em]
+                      text-black
+                      md:text-lg
+                    "
+                  >
+                    {t("sdg4")}
+                  </h3>
+
+                  <p
+                    className="
+                      mt-1
+                      text-sm
+                      leading-relaxed
+                      text-black/55
+                      md:text-[15px]
+                    "
+                  >
+                    {t("sdg4text")}
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* CARD 2 */}
+              <motion.div
+                whileHover={{
+                  y: -4,
+                }}
+                transition={{
+                  duration: 0.25,
+                }}
+                className="
+                  flex items-center gap-4
+                  rounded-3xl
+                  border border-black/[0.05]
+                  bg-white
+                  p-4 md:p-5
+                  shadow-[0_6px_24px_rgba(0,0,0,0.04)]
+                "
+              >
+                <div
+                  className="
+                    flex h-16 w-16 shrink-0
+                    items-center justify-center
+                    overflow-hidden
+                    rounded-2xl
+                    bg-violet-50
+                  "
+                >
+                  <Image
+                    src="/sdg17.png"
+                    alt="SDG 17"
+                    width={52}
+                    height={52}
+                    className="object-contain"
+                  />
+                </div>
+
+                <div className="min-w-0">
+                  <h3
+                    className="
+                      text-base
+                      font-semibold
+                      tracking-[-0.02em]
+                      text-black
+                      md:text-lg
+                    "
+                  >
+                    {t("sdg17")}
+                  </h3>
+
+                  <p
+                    className="
+                      mt-1
+                      text-sm
+                      leading-relaxed
+                      text-black/55
+                      md:text-[15px]
+                    "
+                  >
+                    {t("sdg17text")}
+                  </p>
+                </div>
+              </motion.div>
+            </div>
           </motion.div>
 
           {/* RIGHT VISUAL */}
@@ -171,117 +241,168 @@ export function AboutSection() {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             transition={{
-              duration: prefersReducedMotion ? 0 : 0.7,
               delay: prefersReducedMotion ? 0 : 0.15,
             }}
-            className="relative"
+            className="
+              grid gap-5
+              items-stretch
+              lg:grid-cols-[0.82fr_0.48fr]
+            "
           >
-            {/* SOFT GLOW */}
+            {/* LARGE IMAGE */}
             <div
               className="
-                absolute
-                inset-0
-                rounded-[3rem]
-                bg-gradient-to-br
-                from-violet-200/10
-                to-fuchsia-200/10
-                blur-2xl
-              "
-            />
-
-            {/* IMAGE CARD */}
-            <div
-              className="
-                relative
-                overflow-hidden
-                rounded-[2.5rem]
-                border
-                border-black/[0.06]
+                relative overflow-hidden
+                rounded-[2rem]
                 bg-white
-                shadow-[0_20px_60px_rgba(0,0,0,0.10)]
+                shadow-[0_10px_40px_rgba(0,0,0,0.06)]
               "
             >
-              <Image
-                src="/abouts.jpeg"
-                alt="About"
-                width={1200}
-                height={1400}
-                sizes="
-                  (max-width: 768px) 100vw,
-                  (max-width: 1200px) 50vw,
-                  40vw
-                "
-                className="
-                  h-auto
-                  w-full
-                  object-cover
-                "
-                priority={false}
-              />
-
-              {/* OVERLAY */}
               <div
                 className="
-                  absolute
-                  inset-0
+                  relative
+                  flex items-center justify-center
+                  h-[420px]
+                  md:h-[560px]
+                  lg:h-full
+                  lg:min-h-[640px]
+                "
+              >
+                <Image
+                  src="/mem.png"
+                  alt="About"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  priority
+                />
+              </div>
+
+              <div
+                className="
+                  pointer-events-none
+                  absolute inset-0
                   bg-gradient-to-t
-                  from-black/20
+                  from-black/5
                   via-transparent
                   to-transparent
                 "
               />
             </div>
 
-            {/* FLOATING ORBS - desktop only */}
-            {!prefersReducedMotion && (
-              <>
-                <motion.div
+            {/* RIGHT STACK */}
+            <div
+              className="
+                grid grid-cols-2 gap-4
+                lg:flex lg:h-full lg:flex-col lg:gap-5
+              "
+            >
+              {/* QUOTE CARD */}
+              <div
+                className="
+                  relative
+                  flex flex-col justify-between
+                  overflow-hidden
+                  rounded-[1.8rem]
+                  border border-violet-100
+                  bg-white
+                  p-5
+                  shadow-[0_8px_30px_rgba(124,58,237,0.06)]
+                  lg:flex-1 lg:p-6
+                "
+              >
+                {/* Quote icon */}
+                <span
                   className="
+                    pointer-events-none
                     absolute
-                    -top-10
-                    -right-10
-                    w-24
-                    h-24
-                    rounded-full
-                    bg-violet-500/10
-                    blur-2xl
-                    hidden
-                    md:block
+                    -top-2
+                    left-4
+                    select-none
+                    text-[4rem]
+                    font-serif
+                    leading-none
+                    text-violet-100/70
                   "
-                  animate={{
-                    scale: [1, 1.15, 1],
-                  }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                />
+                >
+                  “
+                </span>
 
-                <motion.div
+                <div
                   className="
-                    absolute
-                    -bottom-10
-                    -left-10
-                    w-20
-                    h-20
-                    rounded-full
-                    bg-fuchsia-500/10
-                    blur-2xl
-                    hidden
-                    md:block
+                    relative z-10
+                    flex h-full flex-col
                   "
-                  animate={{
-                    scale: [1, 1.2, 1],
-                  }}
-                  transition={{
-                    duration: 6,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                />
-              </>
-            )}
+                >
+                  <p
+                    className="
+                      text-[10px]
+                      font-semibold
+                      uppercase
+                      tracking-[0.25em]
+                      text-violet-600
+                      md:text-xs
+                    "
+                  >
+                    EduLink
+                  </p>
+
+                  <div
+                    className="
+                      flex flex-1 items-center justify-center
+                      text-center
+                    "
+                  >
+                    <h3
+                      className="
+                        max-w-[12rem]
+                        text-lg
+                        font-bold
+                        leading-snug
+                        tracking-[-0.03em]
+                        text-black
+                        italic
+                        md:text-2xl
+                      "
+                    >
+                      {t("cardTitle")}
+                    </h3>
+                  </div>
+                </div>
+              </div>
+
+              {/* ROBOT CARD */}
+              <div
+                className="
+                  relative overflow-hidden
+                  rounded-[1.8rem]
+                  bg-white
+                  shadow-[0_10px_35px_rgba(0,0,0,0.05)]
+                  lg:flex-1
+                "
+              >
+                <div
+                  className="
+                    relative
+                    h-full
+                    min-h-[220px]
+                    overflow-hidden
+                    rounded-inherit
+                    lg:min-h-[300px]
+                  "
+                >
+                  <Image
+                    src="/mar2.png"
+                    alt="Robot"
+                    fill
+                    className="
+                      object-cover
+                    "
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                  />
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>

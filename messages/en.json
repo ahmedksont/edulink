@@ -10,13 +10,19 @@
   },
   "hero": {
     "title": "Edu Link",
-      "sub-title":"Tunisien  EdTech Development Network",
+    "sub-title": "Tunisien  EdTech Development Network",
     "subtitle": "Where education and technology collide",
     "cta": "Discover"
   },
   "about": {
     "title": "About",
-    "description": "The EduLink connects EdTech startups, educational institutions, researchers, and investors to build a new generation of intelligent education driven by digital pedagogy, artificial intelligence, and innovation."
+    "description": "The EduLink connects EdTech startups, educational institutions, researchers, and investors to build a new generation of intelligent education driven by digital pedagogy, artificial intelligence, and innovation.",
+     "sdg4": "SDG 4 — Quality Education",
+    "sdg17": "SDG 17 — Partnerships",
+
+    "cardTitle": " “Always for quality education and networking.” ",
+    "cardDescription": "A platform connecting researchers, investors and startups.",
+    "discover": "Discover"
   },
   "programs": {
     "title": "Programs",
@@ -26,7 +32,6 @@
     "title": "Community",
     "description": "Join a network of passionate entrepreneurs, educators, and innovators."
   },
-  
   "contact": {
     "title": "Get in Touch",
     "description": "Send us a message to explore collaboration opportunities within the Tunisian EduLink ecosystem.",
@@ -35,130 +40,112 @@
     "email": "Your email",
     "message": "Your message...",
     "cta": "Send message"
-  }
-,
+  },
   "footer": {
     "tag": "Tunisian EduLink Hub",
     "description": "An ecosystem where education and technology meet to innovate.",
-
     "navTitle": "Navigation",
     "quickTitle": "Quick Links",
     "contactTitle": "Contact",
-
     "nav": {
       "about": "About",
       "programs": "Programs",
       "community": "Community",
       "contact": "Contact"
     },
-
     "quick": {
       "events": "Events",
       "news": "News",
       "partners": "Partners",
       "faq": "FAQ"
     },
-
     "address": "Sousse, Tunisia",
     "email": "contact@EduLink.tn",
     "phone": "+216 55 595 234",
     "placeholder": "Your email",
-
     "rights": "All rights reserved • Developed by <name></name>"
   },
-   "vision": {
+  "vision": {
     "title": "Our Vision",
     "paragraph1": "We believe Tunisia has the potential to become a leading hub for intelligent education and educational technologies in Africa and internationally. Through pedagogical innovation, learning sciences research, artificial intelligence, and digital transformation, a new educational ecosystem is emerging to reinvent teaching, training, and student support.",
-
-"paragraph3": "to support EduLink startups, educational institutions, and innovative project leaders in building high-impact digital solutions. Through training programs, mentorship, conferences, webinars, and entrepreneurial support initiatives, the Collider helps transform ideas into EdTech startups capable of modernizing education and training through intelligent technologies and artificial intelligence.",
-
-"highlight": "The Tunisian Collider aims"
-  }
-  ,
+    "paragraph3": "to support EduLink startups, educational institutions, and innovative project leaders in building high-impact digital solutions. Through training programs, mentorship, conferences, webinars, and entrepreneurial support initiatives, the Collider helps transform ideas into EdTech startups capable of modernizing education and training through intelligent technologies and artificial intelligence.",
+    "highlight": "The Tunisian Collider aims"
+  },
   "team": {
     "title": "Meet Our Team",
     "description": "Passionate experts building the future of education technology",
-
-     "sonia": {
-  "role": "CEO and President of the Board",
-  "company": "ISET Sousse, Tunisia",
-  "bio": "Computer science lecturer and instructional engineering expert, Sonia Sahli is the creator of SonyPlanner. Her expertise in UI/UX Design and collaborations with several European universities reflect her commitment to educational innovation."
-},
-
-"denis": {
-  "role": "Vice President Finance",
-  "company": "EPFL, Switzerland",
-  "bio": "University professor and president of Graasp.org, Denis Gillet leads the Interaction Systems Group at EPFL. He is a member of the IEEE Education Committee and co-founder of the Swiss  EdTech Development Network."
-},
-
-"thierry": {
-  "role": "Vice President Education",
-  "company": "Avignon University, France",
-  "bio": "Expert in higher education pedagogy and digital innovation with nearly thirty years of experience. Thierry Spriet actively contributes to the digital transformation of higher education."
-},
-
-"ahmed": {
-  "role": "Team Dev",
-  "company": "ISET Sousse, Tunisia",
-  "bio": "Full-stack developer specialized in AI, cybersecurity, and scalable web systems. Organizer at GDG Sousse."
-},
-
-"maram": {
-  "role": "Team Com",
-  "company": "University of Sousse, Tunisia",
-  "bio": "Passionate about development and digital technologies, Maram contributes to creating modern and high-performance digital experiences."
-}
+    "sonia": {
+      "role": "CEO and President of the Board",
+      "company": "ISET Sousse, Tunisia",
+      "bio": "Computer science lecturer and instructional engineering expert, Sonia Sahli is the creator of SonyPlanner. Her expertise in UI/UX Design and collaborations with several European universities reflect her commitment to educational innovation."
+    },
+    "denis": {
+      "role": "Vice President Finance",
+      "company": "EPFL, Switzerland",
+      "bio": "University professor and president of Graasp.org, Denis Gillet leads the Interaction Systems Group at EPFL. He is a member of the IEEE Education Committee and co-founder of the Swiss  EdTech Development Network."
+    },
+    "thierry": {
+      "role": "Vice President Education",
+      "company": "Avignon University, France",
+      "bio": "Expert in higher education pedagogy and digital innovation with nearly thirty years of experience. Thierry Spriet actively contributes to the digital transformation of higher education."
+    },
+    "ahmed": {
+      "role": "Team Dev",
+      "company": "ISET Sousse, Tunisia",
+      "bio": "Full-stack developer specialized in AI, cybersecurity, and scalable web systems. Organizer at GDG Sousse."
+    },
+    "maram": {
+      "role": "Team Com",
+      "company": "University of Sousse, Tunisia",
+      "bio": "Passionate about development and digital technologies, Maram contributes to creating modern and high-performance digital experiences."
+    }
   },
   "features": {
-  "coworking": "An innovation and collaboration space dedicated to EdTech startups, digital pedagogy, and artificial intelligence projects applied to education, fostering creativity, experimentation, and the development of intelligent educational solutions.",
-
-  "p2p": "Collaborative learning, mentorship, and knowledge-sharing programs focused on pedagogy, AI, digital transformation, educational webinars, and innovative approaches to intelligent learning.",
-
-  "ecosystem": "An ecosystem bringing together educational institutions, researchers, startups, investors, digital experts, and public stakeholders to promote educational innovation and the goals of SDG 4 – Quality Education.",
-
-  "events": "Organization of conferences, training programs, webinars, workshops, hackathons, and support initiatives designed to transform innovative ideas into high-impact EdTech startups.",
-
-  "collisions": "Creating synergies between students, entrepreneurs, researchers, and organizations to accelerate the integration of intelligent technologies, artificial intelligence, and digital solutions into education and training."
-},
-  
+    "coworking": "An innovation and collaboration space dedicated to EdTech startups, digital pedagogy, and artificial intelligence projects applied to education, fostering creativity, experimentation, and the development of intelligent educational solutions.",
+    "p2p": "Collaborative learning, mentorship, and knowledge-sharing programs focused on pedagogy, AI, digital transformation, educational webinars, and innovative approaches to intelligent learning.",
+    "ecosystem": "An ecosystem bringing together educational institutions, researchers, startups, investors, digital experts, and public stakeholders to promote educational innovation and the goals of SDG 4 – Quality Education.",
+    "events": "Organization of conferences, training programs, webinars, workshops, hackathons, and support initiatives designed to transform innovative ideas into high-impact EdTech startups.",
+    "collisions": "Creating synergies between students, entrepreneurs, researchers, and organizations to accelerate the integration of intelligent technologies, artificial intelligence, and digital solutions into education and training."
+  },
   "testimonials": {
     "title": "What Our Members Say",
     "subtitle": "Discover experiences from startups in our Tunisian EduLink ecosystem",
     "cta": "A community growing every day",
-
-    "t1":{ "quote": "My collaboration with Sonia started through the IEEE Entrepreneurship program on the Smart Exam project. She is a strong connector between academia and entrepreneurship, building valuable international collaborations 🇮🇹🇨🇭🇹🇳🇪🇬and turning ideas into real opportunities", "role": " PE, PhD" } ,
-    "t2": { "quote": "Very happy to have collaborated with Edulink. We had a great experience welcoming Tunisian students as interns at our startup. Skilleddevelopers who brought real value to our team. Thank you Edulink for this great connection!", "role": "CTO - The Schooly - Scorton" },
-    "t3": { "quote": "Edulink opens the door to investors and opportunities. Thanks to it, I was able to turn my smart agriculture project into a future startup.", "role": "Final-year student, Final year project" }
-  
-},
-"ripu": {
-  "label": "Flagship Initiative",
-  "title": "RIPU 25",
-  "subtitle": "Shaping the Future of Education",
-  "description": "RIPU 25 is an international initiative bringing together educators, researchers, and innovators to rethink higher education in the age of artificial intelligence and digital transformation, fostering collaboration and shaping the future of learning.",
-  "cta": "Discover RIPU 25",
-  "galleryLabel": "RIPU 25",
-"galleryTitle": "Highlights from",
-"galleryHighlight": "RIPU 25",
-"galleryDescription": "Key moments, innovation, networking and community during RIPU 2025. A new edition of RIPU will be announced soon."
-},
-"smartExam": {
+    "t1": {
+      "quote": "My collaboration with Sonia started through the IEEE Entrepreneurship program on the Smart Exam project. She is a strong connector between academia and entrepreneurship, building valuable international collaborations 🇮🇹🇨🇭🇹🇳🇪🇬and turning ideas into real opportunities",
+      "role": " PE, PhD"
+    },
+    "t2": {
+      "quote": "Very happy to have collaborated with Edulink. We had a great experience welcoming Tunisian students as interns at our startup. Skilleddevelopers who brought real value to our team. Thank you Edulink for this great connection!",
+      "role": "CTO - The Schooly - Scorton"
+    },
+    "t3": {
+      "quote": "Edulink opens the door to investors and opportunities. Thanks to it, I was able to turn my smart agriculture project into a future startup.",
+      "role": "Final-year student, Final year project"
+    }
+  },
+  "ripu": {
+    "label": "Flagship Initiative",
+    "title": "RIPU 25",
+    "subtitle": "Shaping the Future of Education",
+    "description": "RIPU 25 is an international initiative bringing together educators, researchers, and innovators to rethink higher education in the age of artificial intelligence and digital transformation, fostering collaboration and shaping the future of learning.",
+    "cta": "Discover RIPU 25",
+    "galleryLabel": "RIPU 25",
+    "galleryTitle": "Highlights from",
+    "galleryHighlight": "RIPU 25",
+    "galleryDescription": "Key moments, innovation, networking and community during RIPU 2025. A new edition of RIPU will be announced soon."
+  },
+  "smartExam": {
     "label": "Achievement",
     "description": "An intelligent examination platform designed to enhance learning through AI-driven insights, adaptive assessments, and personalized education experiences.",
-
     "aiTitle": "AI-Powered Analysis",
     "aiDescription": "Advanced artificial intelligence analyzes performance and delivers personalized recommendations for improvement.",
-
     "educationTitle": "Modern Education",
     "educationDescription": "Built to transform the educational experience with smarter evaluations and adaptive learning systems.",
-
     "award": "IEEE Entrepreneurship Winner",
-
     "awardDescription": "Winner of the IEEE Entrepreneurship Competition for innovation in AI-powered education technology."
   },
   "loader": {
-  "text": "PREPARING EXPERIENCE"
+    "text": "PREPARING EXPERIENCE"
+  }
 }
-
-}
-  

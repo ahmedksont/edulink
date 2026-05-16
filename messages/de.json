@@ -17,7 +17,13 @@
   "about": {
     "title": "Über uns",
     "description": "Der EduLink verbindet EdTech-Startups, Bildungseinrichtungen, Forschende und Investoren, um eine neue Generation intelligenter Bildung aufzubauen, die auf digitaler Pädagogik, künstlicher Intelligenz und Innovation basiert."
-  },
+  ,
+ "sdg4": "SDG 4 — Hochwertige Bildung",
+    "sdg17": "SDG 17 — Partnerschaften",
+
+    "cardTitle": " „Immer für hochwertige Bildung und Networking.“",
+    "cardDescription": "Eine Plattform, die Forschende, Investoren und Startups verbindet.",
+    "discover": "Entdecken"},
   "programs": {
     "title": "Programme",
     "description": "Programme zur Förderung von Innovationen im Bildungsbereich."
