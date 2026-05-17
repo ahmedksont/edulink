@@ -10,13 +10,13 @@
   },
   "hero": {
     "title": "Edu Link",
-    "sub-title": "Tunisien  EdTech Development Network",
+    "sub-title": "Tunisien EdTech Development Network",
     "subtitle": "Wo Bildung und Technologie zusammenkommen",
     "cta": "Entdecken"
   },
   "about": {
     "title": "Über uns",
-    "description": "Der EduLink verbindet EdTech-Startups, Bildungseinrichtungen, Forschende und Investoren, um eine neue Generation intelligenter Bildung aufzubauen, die auf digitaler Pädagogik, künstlicher Intelligenz und Innovation basiert."
+    "description": "Der EduLink verbindet EdTech-Startups, Bildungseinrichtungen, Forschende und Investoren, um eine neue Generation intelligenter Lösungen, die auf digitaler Pädagogik, künstlicher Intelligenz und Innovation basiert."
   ,
  "sdg4": "SDG 4 — Hochwertige Bildung",
     "sdg17": "SDG 17 — Partnerschaften",
@@ -42,7 +42,7 @@
     "cta": "Nachricht senden"
   },
   "footer": {
-    "tag": "Tunesischer EduLink Hub",
+    "tag": "Tunesischer EdTech Development Network",
     "description": "Ein Ökosystem, in dem Bildung und Technologie zusammenkommen.",
     "navTitle": "Navigation",
     "quickTitle": "Schnellzugriff",
@@ -63,12 +63,12 @@
     "email": "contact@EduLink.tn",
     "phone": "+216 55 595 234",
     "placeholder": "Ihre E-Mail",
-    "rights": "Alle Rechte vorbehalten • Entwickelt von <name></name>"
+    "rights": "© 2026 EduLink. Alle Rechte vorbehalten."
   },
   "vision": {
     "title": "Unsere Vision",
     "paragraph1": "Wir glauben, dass Tunesien das Potenzial hat, zu einem führenden Zentrum für intelligente Bildung und Bildungstechnologien in Afrika und international zu werden. Durch pädagogische Innovation, Forschung in den Lernwissenschaften, künstliche Intelligenz und digitale Transformation entsteht ein neues Bildungsökosystem, das Lehre, Ausbildung und die Unterstützung von Studierenden neu gestaltet.",
-    "paragraph3": "EduLink-Startups, Bildungseinrichtungen und innovative Projektträger bei der Entwicklung digitaler Lösungen mit hoher Wirkung zu unterstützen. Durch Ausbildungsprogramme, Mentoring, Konferenzen, Webinare und unternehmerische Begleitung hilft der Collider dabei, Ideen in EdTech-Startups zu verwandeln, die Bildung und Ausbildung mithilfe intelligenter Technologien und künstlicher Intelligenz modernisieren.",
+    "paragraph3": "Startups, Bildungseinrichtungen und innovative Projektträger bei der Entwicklung digitaler Lösungen mit hoher Wirkung zu unterstützen. Durch Ausbildungsprogramme, Mentoring, Konferenzen, Webinare und unternehmerische Begleitung hilft EduLink dabei, Ideen in EdTech-Startups zu verwandeln, die Bildung und Ausbildung mithilfe intelligenter Technologien und künstlicher Intelligenz modernisieren.",
     "highlight": "Der tunesische Collider verfolgt das Ziel"
   },
   "team": {
@@ -123,6 +123,10 @@
     "t3": {
       "quote": "Edulink öffnet die Tür zu Investoren und neuen Möglichkeiten. Dank Edulink konnte ich mein Smart-Agriculture-Projekt in ein zukünftiges Startup verwandeln.",
       "role": "Abschlussstudent, Abschlussprojekt"
+    },
+    "t4": {
+      "quote": "Ich habe die Qualität der Austausche und Interventionen während der RIPU 25 sehr geschätzt. Der Informations- und Erfahrungsaustausch rund um künstliche Intelligenz im pädagogischen Kontext war besonders bereichernd und inspirierend für mich. Ein großes Lob an das gesamte Team.",
+      "role": "Maitre Technologue en informatique"
     }
   },
   "ripu": {
@@ -145,7 +149,7 @@
     "educationDescription": "Entwickelt, um das Bildungserlebnis mit intelligenteren Bewertungen und adaptiven Lernsystemen zu transformieren.",
     "award": "IEEE Entrepreneurship Gewinner",
     "awardDescription": "Gewinner des IEEE Entrepreneurship Wettbewerbs für Innovationen im Bereich KI-gestützter Bildungstechnologien."
-  },
+  ,"cta": "IEEE Entrepreneurship 101 entdecken"},
   "loader": {
     "text": "ERLEBNIS WIRD VORBEREITET"
   }

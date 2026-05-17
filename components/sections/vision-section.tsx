@@ -129,13 +129,11 @@ export function VisionSection() {
             duration: prefersReducedMotion ? 0 : 0.6,
           }}
           className="
-            mb-8
-            font-display
-            text-5xl
-            md:text-7xl
-            font-semibold
-            tracking-[-0.05em]
-            leading-[0.92]
+            mb-6
+                text-4xl
+                sm:text-5xl
+                md:text-5xl
+                font-bold
             text-white
           "
         >

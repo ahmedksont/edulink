@@ -10,13 +10,13 @@
   },
   "hero": {
     "title": "Edu Link",
-    "sub-title": "Tunisien  EdTech Development Network",
+    "sub-title": "EdTech Development Network Tunisien",
     "subtitle": "Où l'éducation et la technologie se rencontrent",
     "cta": "Découvrir"
   },
   "about": {
     "title": "À propos",
-    "description": "Le EduLink connecte les startups EdTech, institutions éducatives, chercheurs et investisseurs pour construire une nouvelle génération d’éducation intelligente basée sur la pédagogie numérique, l’intelligence artificielle et l’innovation."
+    "description": "Le EduLink connecte les startups EdTech, institutions éducatives, chercheurs et investisseurs pour construire une nouvelle génération de solutions basée sur la pédagogie numérique, l’intelligence artificielle et l’innovation."
   ,
 "sdg4": "SDG 4 — Éducation de qualité",
 "sdg4text": "Garantir une éducation inclusive, équitable et de qualité pour tous.",
@@ -34,7 +34,7 @@
     "description": "Rejoignez un réseau d'entrepreneurs, d'éducateurs et d'innovateurs passionnés."
   },
   "footer": {
-    "tag": "EduLink Hub Tunisien",
+    "tag": "EdTech Development Network Tunisien",
     "description": "Un écosystème où l'éducation et la technologie se rencontrent pour innover.",
     "navTitle": "Navigation",
     "quickTitle": "Liens rapides",
@@ -55,12 +55,12 @@
     "email": "contact@edulink.tn",
     "phone": "+216 55 595 234",
     "placeholder": "Votre email",
-    "rights": "Tous droits réservés • Développé par <name></name>"
+    "rights": "© 2026 EduLink. Tous droits réservés."
   },
   "vision": {
     "title": "Notre Vision",
     "paragraph1": "Nous croyons que la Tunisie possède le potentiel pour devenir un acteur majeur de l’éducation intelligente et des technologies éducatives en Afrique et à l’international. Grâce à l’innovation pédagogique, à la recherche en sciences de l’apprentissage, à l’intelligence artificielle et à la transformation numérique, un nouvel écosystème éducatif émerge pour réinventer l’enseignement, la formation et l’accompagnement des étudiants.",
-    "paragraph3": "à accompagner les startups EduLink, les établissements éducatifs et les porteurs d’idées innovantes dans la création de solutions numériques à fort impact. À travers des programmes de formation, du mentorat, des conférences, des webinaires et des initiatives d’accompagnement entrepreneurial, le Collider aide à transformer les idées en startups EdTech capables de moderniser l’éducation et la formation grâce aux technologies intelligentes et à l’intelligence artificielle.",
+    "paragraph3": "à accompagner les startups , les établissements éducatifs et les porteurs d’idées innovantes dans la création de solutions numériques à fort impact. À travers des programmes de formation, du mentorat, des conférences, des webinaires et des initiatives d’accompagnement entrepreneurial, EduLink aide à transformer les idées en startups EdTech capables de moderniser l’éducation et la formation grâce aux technologies intelligentes et à l’intelligence artificielle.",
     "highlight": "Le  EdTech Development Network Tunisien vise"
   },
   "team": {
@@ -72,12 +72,12 @@
       "bio": "Enseignante universitaire en informatique et experte en ingénierie pédagogique, Sonia Sahli est créatrice de SonyPlanner. Son expertise en UI/UX Design et sa collaboration avec diverses universités européennes témoignent de son engagement dans l'innovation pédagogique."
     },
     "denis": {
-      "role": "Vice President Finance",
+      "role": "Vice Président Finance",
       "company": "EPFL, Suisse",
       "bio": "Enseignant universitaire et président de Graasp.org, Denis Gillet dirige le groupe des systèmes d'interaction à l'EPFL. Il est membre du comité pour l'éducation de l'IEEE et cofondateur du Swiss  EdTech Development Network."
     },
     "thierry": {
-      "role": "Vice President Education",
+      "role": "Vice Président Education",
       "company": "Avignon Université, France",
       "bio": "Expert en pédagogie universitaire et innovation numérique avec près de trente ans d'expérience. Thierry Spriet participe activement à la transformation numérique de l'enseignement supérieur."
     },
@@ -114,6 +114,10 @@
     "t3": {
       "quote": "Edulink ouvre la porte à des investisseurs et des opportunités. Grâce à lui, j’ai pu transformer mon projet d’agriculture intelligente en une future startup.",
       "role": "Final-year student, Final year project"
+    },
+    "t4": {
+      "quote": "J'ai beaucoup apprécié la qualité des échanges et des interventions tout au long de la RIPU 25. Le partage d'informations et d'expériences autour de l'intelligence artificielle dans le contexte pédagogique a été particulièrement enrichissant et inspirant pour moi. Bravo à toute l'équipe.",
+      "role": "Maitre Technologue en informatique"
     }
   },
   "contact": {
@@ -145,6 +149,7 @@
     "educationDescription": "Conçu pour transformer l'expérience éducative grâce à des évaluations plus intelligentes et des systèmes d'apprentissage adaptatifs.",
     "award": "Lauréat IEEE Entrepreneurship",
     "awardDescription": "Lauréat du concours IEEE Entrepreneurship pour l'innovation dans les technologies éducatives alimentées par l'IA."
+  ,"cta": "Découvrir IEEE Entrepreneurship 101"
   },
   "loader": {
     "text": "PRÉPARATION DE L’EXPÉRIENCE"

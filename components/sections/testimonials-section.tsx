@@ -41,6 +41,16 @@ export default function TestimonialsSection() {
       rotation: "rotate-6",
       image: "/azza.jpeg",
     },
+    
+    {
+      key: "t4",
+      author: "Maher Abdelli ",
+      roleKey: "t4.role",
+      company: "ISET Kairouan ,Tunisie",
+      stars: 5,
+      rotation: "rotate-3",
+      image: "/azza.jpeg",
+    }
   ];
 
   return (

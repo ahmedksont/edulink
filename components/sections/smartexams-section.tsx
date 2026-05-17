@@ -54,34 +54,13 @@ export function SmartExamSection() {
             viewport={{ once: true }}
             className="order-1 lg:order-2"
           >
-            {/* LABEL */}
-            <div
-              className="
-                inline-flex
-                items-center
-                gap-2
-                px-4
-                py-2
-                rounded-full
-                border
-                border-violet-200
-                bg-white/70
-                backdrop-blur-xl
-                text-violet-700
-                text-sm
-                font-medium
-                mb-8
-              "
-            >
-              <Sparkles className="w-4 h-4" />
-              {t("label")}
-            </div>
-
             {/* TITLE */}
             <h2
              className="
-                mb-6
-                text-6xl
+               mb-6
+                text-4xl
+                sm:text-5xl
+                md:text-5xl
                 font-bold
               "
             >
@@ -105,9 +84,34 @@ export function SmartExamSection() {
             >
               {t("description")}
             </p>
+             <a
+              href="https://www.ripusousse.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                inline-flex
+                items-center
+                justify-center
+                rounded-full
+                bg-gradient-to-r
+                from-violet-500
+                to-fuchsia-500
+                px-7
+                py-4
+                text-lg
+                font-semibold
+                text-white
+                shadow-[0_12px_35px_rgba(139,92,246,0.28)]
+                transition-transform
+                duration-200
+                hover:scale-[1.02]
+              "
+            >
+              {t("cta")}
+            </a>
 
             {/* FEATURES */}
-            <div className="space-y-5 mb-10">
+            <div className="space-y-5 mt-10 mb-10">
               {/* FEATURE 1 */}
               <div className="flex items-start gap-4">
                 <div
@@ -323,7 +327,7 @@ export function SmartExamSection() {
               "
             >
               <Image
-                src="/ieee.png"
+                src="/team.png"
                 alt="Smart Exam"
                 width={1200}
                 height={900}

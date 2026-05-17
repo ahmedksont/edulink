@@ -9,6 +9,11 @@ import {
 
 import { useTranslations } from "next-intl";
 
+import {
+  useEffect,
+  useState,
+} from "react";
+
 const ripuGallery = [
   "/p1.jpg",
   "/p2.jpg",
@@ -29,10 +34,38 @@ export function RipuSection() {
   const prefersReducedMotion =
     useReducedMotion();
 
+  const [isMobile, setIsMobile] =
+    useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(
+        window.innerWidth < 768
+      );
+    };
+
+    checkMobile();
+
+    window.addEventListener(
+      "resize",
+      checkMobile
+    );
+
+    return () =>
+      window.removeEventListener(
+        "resize",
+        checkMobile
+      );
+  }, []);
+
+  const shouldAnimate =
+    !isMobile &&
+    !prefersReducedMotion;
+
   const fadeUp = {
     hidden: {
       opacity: 0,
-      y: 24,
+      y: shouldAnimate ? 24 : 8,
     },
     visible: {
       opacity: 1,
@@ -54,6 +87,7 @@ export function RipuSection() {
       "
     >
       {/* TOP SEPARATOR */}
+
       <div
         className="
           absolute
@@ -71,50 +105,58 @@ export function RipuSection() {
       />
 
       {/* SOFT BACKGROUND GLOW */}
+
       <div className="absolute inset-0 flex justify-center pointer-events-none">
         <div
           className="
-            h-[260px]
-            w-[500px]
+            h-[160px]
+            w-[280px]
+            md:h-[260px]
+            md:w-[500px]
             rounded-full
             bg-violet-500/10
-            blur-2xl
+            blur-[50px]
+            md:blur-2xl
           "
         />
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl">
         {/* HERO */}
+
         <div
           className="
             grid
             items-center
-            gap-16
+            gap-12
             md:grid-cols-2
             md:gap-20
           "
         >
           {/* LEFT */}
+
           <motion.div
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             transition={{
-              duration:
-                prefersReducedMotion
-                  ? 0
-                  : 0.5,
+              duration: shouldAnimate
+                ? 0.5
+                : 0.3,
             }}
           >
             <h2
               className="
                 mb-6
-                text-5xl
+                text-4xl
+                sm:text-5xl
+                md:text-5xl
                 font-bold
               "
             >
-              {t("title")} —{" "}
+              {t("title")} :{" "}
+
               <span
                 className="
                   bg-gradient-to-r
@@ -131,9 +173,10 @@ export function RipuSection() {
 
             <p
               className="
-                mb-10
+                mb-8
+                md:mb-10
                 max-w-xl
-                text-lg
+                text-base
                 md:text-xl
                 leading-relaxed
                 text-black/60
@@ -154,15 +197,18 @@ export function RipuSection() {
                 bg-gradient-to-r
                 from-violet-500
                 to-fuchsia-500
-                px-7
-                py-4
-                text-lg
+                px-6
+                md:px-7
+                py-3
+                md:py-4
+                text-base
+                md:text-lg
                 font-semibold
                 text-white
-                shadow-[0_12px_35px_rgba(139,92,246,0.28)]
+                shadow-[0_10px_25px_rgba(139,92,246,0.22)]
                 transition-transform
                 duration-200
-                hover:scale-[1.02]
+                md:hover:scale-[1.02]
               "
             >
               {t("cta")}
@@ -170,16 +216,16 @@ export function RipuSection() {
           </motion.div>
 
           {/* RIGHT */}
+
           <motion.div
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             transition={{
-              duration:
-                prefersReducedMotion
-                  ? 0
-                  : 0.6,
+              duration: shouldAnimate
+                ? 0.6
+                : 0.3,
             }}
             className="
               relative
@@ -189,29 +235,32 @@ export function RipuSection() {
             "
           >
             {/* GLOW */}
+
             <div
               className="
                 absolute
                 top-1/2
                 left-1/2
-                h-[260px]
-                w-[260px]
+                h-[180px]
+                w-[180px]
+                md:h-[360px]
+                md:w-[360px]
                 -translate-x-1/2
                 -translate-y-1/2
                 rounded-full
                 bg-violet-500/15
-                blur-2xl
-                md:h-[360px]
-                md:w-[360px]
+                blur-[60px]
+                md:blur-2xl
               "
             />
 
             {/* POSTER */}
+
             <motion.div
               whileHover={
-                prefersReducedMotion
-                  ? {}
-                  : { y: -4 }
+                shouldAnimate
+                  ? { y: -4 }
+                  : {}
               }
               transition={{
                 duration: 0.2,
@@ -219,15 +268,17 @@ export function RipuSection() {
               className="
                 relative
                 z-10
-                h-[360px]
-                w-[260px]
-                overflow-hidden
-                rounded-[32px]
-                border
-                border-white/20
-                shadow-[0_20px_60px_rgba(0,0,0,0.18)]
+                h-[320px]
+                w-[220px]
                 md:h-[500px]
                 md:w-[360px]
+                overflow-hidden
+                rounded-[28px]
+                md:rounded-[32px]
+                border
+                border-white/20
+                shadow-[0_10px_30px_rgba(0,0,0,0.12)]
+                md:shadow-[0_20px_60px_rgba(0,0,0,0.18)]
               "
             >
               <Image
@@ -253,57 +304,64 @@ export function RipuSection() {
         </div>
 
         {/* GALLERY */}
-        <div className="mt-10 md:mt-36">
+
+        <div className="mt-16 md:mt-36">
           {/* HEADER */}
+
           <motion.div
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             transition={{
-              duration:
-                prefersReducedMotion
-                  ? 0
-                  : 0.5,
+              duration: shouldAnimate
+                ? 0.5
+                : 0.3,
             }}
             className="mb-10 text-center"
           >
-          
-
-              <h3
+            <h3
               className="
-                mb-1
-                text-5xl
+               mb-6
+                text-4xl
+                sm:text-5xl
+                md:text-5xl
                 font-bold
               "
             >
-              <span> {t("galleryTitle")}{" "}</span>
+              <span>
+                {t("galleryTitle")}{" "}
+              </span>
 
               <span className="text-violet-500">
-               {t("galleryHighlight")}
+                {t(
+                  "galleryHighlight"
+                )}
               </span>
             </h3>
-             
-            
-     
 
             <p
               className="
                 mx-auto
                 mt-5
                 max-w-2xl
-                text-lg
+                text-base
+                md:text-lg
                 leading-relaxed
                 text-black/60
               "
             >
-              {t("galleryDescription")}
+              {t(
+                "galleryDescription"
+              )}
             </p>
           </motion.div>
 
           {/* SLIDER */}
+
           <div className="relative overflow-hidden">
             {/* LEFT FADE */}
+
             <div
               className="
                 pointer-events-none
@@ -312,7 +370,7 @@ export function RipuSection() {
                 top-0
                 bottom-0
                 z-20
-                w-16
+                w-10
                 md:w-32
                 bg-gradient-to-r
                 from-white
@@ -321,6 +379,7 @@ export function RipuSection() {
             />
 
             {/* RIGHT FADE */}
+
             <div
               className="
                 pointer-events-none
@@ -329,7 +388,7 @@ export function RipuSection() {
                 top-0
                 bottom-0
                 z-20
-                w-16
+                w-10
                 md:w-32
                 bg-gradient-to-l
                 from-white
@@ -338,26 +397,28 @@ export function RipuSection() {
             />
 
             {/* TRACK */}
+
             <motion.div
               animate={
-                prefersReducedMotion
-                  ? {}
-                  : {
-                    x: [
-                      "0%",
-                      "-50%",
-                    ],
-                  }
+                shouldAnimate
+                  ? {
+                      x: [
+                        "0%",
+                        "-50%",
+                      ],
+                    }
+                  : {}
               }
               transition={{
-                duration: 40,
+                duration: 50,
                 ease: "linear",
                 repeat: Infinity,
               }}
               className="
                 flex
                 w-max
-                gap-6
+                gap-4
+                md:gap-6
               "
             >
               {[
@@ -367,9 +428,9 @@ export function RipuSection() {
                 <motion.div
                   key={i}
                   whileHover={
-                    prefersReducedMotion
-                      ? {}
-                      : { y: -4 }
+                    shouldAnimate
+                      ? { y: -4 }
+                      : {}
                   }
                   transition={{
                     duration: 0.2,
@@ -377,26 +438,29 @@ export function RipuSection() {
                   className="
                     group
                     relative
-                    h-[220px]
-                    w-[320px]
+                    h-[180px]
+                    w-[260px]
+                    md:h-[280px]
+                    md:w-[420px]
                     shrink-0
                     overflow-hidden
-                    rounded-3xl
+                    rounded-[24px]
+                    md:rounded-3xl
                     border
                     border-black/5
                     bg-white
-                    shadow-[0_8px_30px_rgba(0,0,0,0.06)]
-                    md:h-[280px]
-                    md:w-[420px]
+                    shadow-[0_6px_20px_rgba(0,0,0,0.05)]
+                    md:shadow-[0_8px_30px_rgba(0,0,0,0.06)]
                   "
                 >
                   <Image
                     src={src}
-                    alt={`RIPU Gallery ${i + 1
-                      }`}
+                    alt={`RIPU Gallery ${
+                      i + 1
+                    }`}
                     fill
                     sizes="
-                      (max-width: 768px) 320px,
+                      (max-width: 768px) 260px,
                       420px
                     "
                     className="
@@ -405,6 +469,7 @@ export function RipuSection() {
                   />
 
                   {/* OVERLAY */}
+
                   <div
                     className="
                       absolute

@@ -196,9 +196,7 @@ export function Footer() {
             >
               <span>EduLink</span>
 
-              <span className="text-violet-500">
-                Collider
-              </span>
+              
             </h3>
 
             <div

@@ -169,14 +169,14 @@ export function TeamSection() {
           {/* TITLE */}
           <h2
             className="
-              mb-6
-              font-display
-              text-5xl
-              md:text-7xl
-              font-semibold
-              tracking-[-0.05em]
-              leading-[0.95]
-              text-black
+             text-3xl
+                sm:text-5xl
+                md:text-7xl
+                font-semibold
+                tracking-[-0.05em]
+                leading-[0.92]
+                mb-6
+                md:mb-8
             "
           >
             {t("title")}
