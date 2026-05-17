@@ -323,7 +323,7 @@ export function RipuSection() {
             <h3
               className="
                mb-6
-                text-4xl
+               text-4xl
                 sm:text-5xl
                 md:text-5xl
                 font-bold
