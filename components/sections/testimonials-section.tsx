@@ -49,7 +49,7 @@ export default function TestimonialsSection() {
       company: "ISET Kairouan ,Tunisie",
       stars: 5,
       rotation: "rotate-3",
-      image: "/azza.jpeg",
+      image: "/maher.jpeg",
     }
   ];
 
