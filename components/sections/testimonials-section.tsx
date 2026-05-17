@@ -73,12 +73,10 @@ export default function TestimonialsSection() {
           </p>
         </div>
 
-        {/* CARDS */}
-        <div className="flex flex-wrap justify-center items-stretch gap-8 max-w-6xl mx-auto">
+        {/* CARDS - Force 4 columns on all screen sizes */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-[1700px] mx-auto items-stretch">
           {testimonials.map((testimonial, index) => {
-            const isLeft = index === 0;
-            const isCenter = index === 1;
-            const isRight = index === 2;
+            const isCenter = index === 1 || index === 2;
 
             return (
               <div
@@ -107,7 +105,7 @@ export default function TestimonialsSection() {
                     bg-gray-900
                     rounded-2xl
                     p-6
-                    w-80
+                    w-full
                     min-h-[380px]
                     transition-all
                     duration-500
@@ -144,22 +142,22 @@ export default function TestimonialsSection() {
                   <div className="flex items-center mt-auto pt-4 border-t border-gray-800">
                     {/* USER PHOTO */}
                     <img
-  src={testimonial.image}
-  alt={testimonial.author}
-  className="
-    w-16
-    h-16
-    md:w-20
-    md:h-20
-    rounded-full
-    object-cover
-    mr-4
-    flex-shrink-0
-    border-2
-    border-violet-500/40
-    shadow-lg
-  "
-/>
+                      src={testimonial.image}
+                      alt={testimonial.author}
+                      className="
+                        w-16
+                        h-16
+                        md:w-20
+                        md:h-20
+                        rounded-full
+                        object-cover
+                        mr-4
+                        flex-shrink-0
+                        border-2
+                        border-violet-500/40
+                        shadow-lg
+                      "
+                    />
 
                     <div className="flex-1 min-w-0">
                       <div className="font-bold text-white text-sm truncate">
